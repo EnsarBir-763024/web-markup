@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="JOUW NAAM">
+    <meta name="description" content="Neem contact op met WOHIS voor vragen over gaming, videogames en deze website.">
+    <meta name="keywords" content="contact, WOHIS, gaming, videogames, vragen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - WOHIS</title>
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="WOHIS home">
+            <img src="img/wohis-logo.png" alt="WOHIS logo" title="WOHIS logo">
+        </a>
+
+        <nav class="main-nav" aria-label="Hoofdnavigatie">
+            <ul>
+                <li><a href="sub_category.html">Het begin</a></li>
+                <li><a href="sub_category.html">Videogame crash</a></li>
+                <li><a href="console_war.html">Platforms</a></li>
+                <li><a href="genres.html">Genres</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+        <section class="contact-intro">
+            <h1>Contact</h1>
+            <p>
+                Heb je een vraag over WOHIS? Wil je iets delen of heb je een
+                vraag over videogames? Neem gerust contact met ons op.
+                We proberen je zo snel mogelijk te helpen.
+            </p>
+        </section>
+
+        <section class="contact-form-section">
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Contactformulier</legend>
+                    <section class="contact-fields">
+                        <p>
+                            <label for="salutation">Aanhef:</label>
+                            <select id="salutation" name="salutation" required>
+                                <option value="">Kies uw aanhef</option>
+                                <option value="heer">De heer</option>
+                                <option value="mevrouw">Mevrouw</option>
+                                <option value="anders">Anders</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="name">Naam:</label>
+                            <input type="text"
+                                   id="name"
+                                   name="name"
+                                   placeholder="John Doe"
+                                   required>
+                        </p>
+
+                        <p>
+                            <label for="email">E-mail:</label>
+                            <input type="email"
+                                   id="email"
+                                   name="email"
+                                   placeholder="naam@example.com"
+                                   required>
+                        </p>
+
+                        <p>
+                            <label for="phone">Telefoon:</label>
+                            <input type="tel"
+                                   id="phone"
+                                   name="phone"
+                                   placeholder="06 12 34 56 78">
+                        </p>
+                    </section>
+
+                    <section class="message-field">
+                        <label for="message">Verzoek:</label>
+                        <textarea id="message"
+                                  name="message"
+                                  rows="6"
+                                  placeholder="Type hier uw bericht"
+                                  required></textarea>
+                        <input type="submit" value="Verstuur bericht">
+                    </section>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <section class="footer-brand">
+            <a href="index.html" aria-label="WOHIS home">
+                <img src="img/wohis-logo.png"
+                    alt="WOHIS logo"
+                    title="WOHIS logo">
+            </a>
+        </section>
+
+        <nav aria-label="Ontdek">
+            <ul>
+                <li><strong>Ontdek</strong></li>
+                <li><a href="sub_category.html">Het begin</a></li>
+                <li><a href="console_war.html">Platforms</a></li>
+                <li><a href="genres.html">Genres</a></li>
+            </ul>
+        </nav>
+
+        <nav aria-label="Over WOHIS">
+            <ul>
+                <li><strong>Over WOHIS</strong></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html">Over deze website</a></li>
+            </ul>
+        </nav>
+
+        <nav aria-label="Legal">
+            <ul>
+                <li><strong>Legal</strong></li>
+                <li><a href="contact.html">Algemene voorwaarden</a></li>
+                <li><a href="contact.html">Privacyverklaring</a></li>
+            </ul>
+        </nav>
+
+        <p class="copyright">
+            &copy; 2026 WOHIS - Alle rechten voorbehouden.
+        </p>
+    </footer>
+</body>
+</html>

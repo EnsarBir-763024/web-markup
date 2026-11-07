@@ -1,0 +1,741 @@
+
+/* =========================================
+   WOHiS - Algemene styling
+   ========================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	margin: 0;
+	background-color: #f4eaff;
+	color: #171717;
+	font-family: "Montserrat", Arial, sans-serif;
+	line-height: 1.55;
+	word-spacing: 0.06em;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:visited {
+	color: inherit;
+}
+
+a:hover {
+	color: #00d59a;
+}
+
+a:active {
+	color: #f2c94c;
+}
+
+a:focus-visible {
+	outline: 3px solid #00d59a;
+	outline-offset: 3px;
+}
+
+/* =========================================
+   Header en navigatie
+   ========================================= */
+
+.site-header {
+	position: static;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	min-height: 2.6rem;
+	padding: 0.35rem 3%;
+	background-color: #92734e;
+	color: #ffffff;
+}
+
+.brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	flex-shrink: 0;
+}
+
+.brand-symbol {
+	display: grid;
+	place-items: center;
+	width: 1.7rem;
+	height: 1.7rem;
+	border: 0.15rem double #00d59a;
+	background-color: #050505;
+	color: #00d59a;
+	font-family: "Press Start 2P", monospace;
+	font-size: 0.75rem;
+}
+
+.brand-name {
+	font-size: 1.2rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+}
+
+.brand-name span {
+	color: #00d59a;
+}
+
+.main-nav ul,
+.footer-nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.1rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.main-nav a {
+	font-size: 0.58rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+/* =========================================
+   Algemene pagina
+   ========================================= */
+
+.page-shell {
+	width: 100%;
+	max-width: 76rem;
+	margin: 0 auto;
+	background-color: #ffffff;
+}
+
+/* =========================================
+   Console War pagina
+   ========================================= */
+
+.console-hero {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	align-items: center;
+	gap: 2rem;
+	padding: 2rem 8% 1rem;
+}
+
+.console-hero figure {
+	margin: 0;
+}
+
+.console-hero img {
+	display: block;
+	width: 100%;
+	height: 11rem;
+	object-fit: contain;
+}
+
+.console-hero figcaption {
+	margin-top: 0.4rem;
+	font-size: 0.7rem;
+	text-align: center;
+}
+
+.page-title {
+	margin: 0;
+	padding: 0.8rem 1rem 1.5rem;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+	font-weight: 400;
+	text-align: center;
+}
+
+.console-content {
+	width: min(64%, 58rem);
+	margin: 0 auto;
+	padding: 2rem 4%;
+	background-color: #858000;
+}
+
+.console-content h2,
+.article-copy h1,
+.article-copy h2 {
+	margin: 0 0 0.6rem;
+	font-family: "Press Start 2P", monospace;
+	font-size: 0.75rem;
+	font-weight: 400;
+	line-height: 1.7;
+	text-transform: uppercase;
+}
+
+.console-content p,
+.article-copy p {
+	margin: 0 0 1.2rem;
+	font-size: 0.76rem;
+	line-height: 1.65;
+	text-indent: 1em;
+}
+
+.console-content p::first-letter,
+.article-copy p::first-letter {
+	font-size: 1.15em;
+	font-weight: 700;
+}
+
+.console-content section {
+	margin-bottom: 1.5rem;
+}
+
+.console-content section:last-child {
+	margin-bottom: 0;
+}
+
+/* =========================================
+   Artikelpagina's
+   ========================================= */
+
+.article-page {
+	display: grid;
+	grid-template-columns: 10% 1fr 10%;
+	align-items: stretch;
+}
+
+.article-numbering {
+	grid-column: 1;
+	grid-row: 1;
+	padding: 1.4rem 0.5rem;
+	background-color: #ffffff;
+}
+
+.article-numbering ol {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 24rem;
+	margin: 0;
+	padding-left: 1.8rem;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 1.8rem;
+}
+
+.article-content {
+	grid-column: 2;
+	grid-row: 1;
+	padding: 2rem 9%;
+	background-color: #858000;
+}
+
+.article-section {
+	margin-bottom: 2.4rem;
+}
+
+.article-section:last-child {
+	margin-bottom: 0;
+}
+
+.article-copy h1,
+.article-copy h2 {
+	margin-bottom: 0.7rem;
+}
+
+.article-copy p {
+	font-size: 0.72rem;
+}
+
+.article-images {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+	margin: 1.2rem 0;
+}
+
+.article-images figure {
+	margin: 0;
+}
+
+.article-images img {
+	display: block;
+	width: 100%;
+	height: 8rem;
+	object-fit: cover;
+	border-color: #92734e;
+	border-style: double;
+	border-width: 0.15rem;
+}
+
+.article-images figcaption {
+	margin-top: 0.3rem;
+	font-size: 0.62rem;
+}
+
+.article-images figure:nth-child(even) {
+	background-color: #ffffff;
+}
+
+.article-copy > p {
+	max-width: 52rem;
+}
+
+/* =========================================
+   Lees verder knop
+   ========================================= */
+
+.article-action {
+	display: block;
+	width: fit-content;
+	margin: 2rem auto 0;
+	padding: 0.55rem 1.5rem;
+	border: 0.12rem double #001dcc;
+	border-radius: 0.25rem;
+	background-color: #001dcc;
+	color: #ffffff;
+	font-size: 0.65rem;
+	font-weight: 800;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.article-action:visited {
+	color: #ffffff;
+}
+
+.article-action:hover {
+	border-color: #00d59a;
+	background-color: #00d59a;
+	color: #111111;
+}
+
+.article-action:active {
+	background-color: #92734e;
+	color: #ffffff;
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+
+.site-footer {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1.2fr 1fr 1fr 1fr;
+	gap: 1.4rem;
+	padding: 1.8rem 7% 1rem;
+	background-color: #92734e;
+	color: #ffffff;
+}
+
+.footer-logo .brand-symbol {
+	width: 2.8rem;
+	height: 2.8rem;
+	font-size: 1.1rem;
+}
+
+.footer-logo .brand-name {
+	display: block;
+	font-size: 1.6rem;
+}
+
+.footer-nav h2 {
+	margin: 0 0 0.5rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.footer-nav ul {
+	display: block;
+}
+
+.footer-nav li {
+	margin-bottom: 0.2rem;
+}
+
+.footer-nav a {
+	font-size: 0.62rem;
+}
+
+.copyright {
+	grid-column: 1 / -1;
+	margin: 0.7rem 0 0;
+	font-size: 0.6rem;
+	text-align: center;
+}
+
+/* =========================================
+   Cookie melding
+   ========================================= */
+
+.cookie-message {
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	z-index: 9999;
+	max-width: 20rem;
+	padding: 0.7rem 1rem;
+	border: 0.12rem double #ffffff;
+	background-color: #171717;
+	color: #ffffff;
+	font-size: 0.7rem;
+}
+
+.cookie-message p {
+	margin: 0;
+}
+
+/* =========================================
+   Tablet
+   ========================================= */
+
+@media screen and (max-width: 1024px) {
+
+	.console-content {
+		width: 76%;
+	}
+
+	.article-content {
+		padding-right: 7%;
+		padding-left: 7%;
+	}
+
+}
+
+/* =========================================
+   Smartphone - maximaal 768px
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+
+	.site-header {
+		display: flex;
+		flex-direction: column;
+		gap: 0.45rem;
+		padding: 0.55rem 3%;
+	}
+
+	.brand-symbol {
+		width: 1.4rem;
+		height: 1.4rem;
+		font-size: 0.6rem;
+	}
+
+	.brand-name {
+		font-size: 0.9rem;
+	}
+
+	.main-nav ul {
+		justify-content: center;
+		gap: 0.5rem 0.8rem;
+	}
+
+	.main-nav a {
+		font-size: 0.52rem;
+	}
+
+	/* Console War afbeeldingen onder elkaar */
+
+	.console-hero {
+		grid-template-columns: 1fr;
+		gap: 0.7rem;
+		padding: 1.4rem 12% 0.5rem;
+	}
+
+	.console-hero img {
+		height: auto;
+		max-height: 10rem;
+	}
+
+	.console-hero figcaption {
+		font-size: 0.65rem;
+	}
+
+	.page-title {
+		padding: 0.8rem 1rem 1.2rem;
+		font-size: 1.35rem;
+	}
+
+	.console-content {
+		width: 100%;
+		padding: 1.5rem 7%;
+	}
+
+	.console-content h2,
+	.article-copy h1,
+	.article-copy h2 {
+		font-size: 0.68rem;
+	}
+
+	.console-content p,
+	.article-copy p {
+		font-size: 0.68rem;
+	}
+
+	/* Artikelpagina mobiel */
+
+	.article-page {
+		display: block;
+	}
+
+	.article-numbering {
+		display: none;
+	}
+
+	.article-content {
+		padding: 1.5rem 7%;
+	}
+
+	.article-section {
+		margin-bottom: 2.3rem;
+	}
+
+	.article-images {
+		gap: 0.6rem;
+	}
+
+	.article-images img {
+		height: auto;
+		max-height: 8rem;
+	}
+
+	.article-action {
+		margin-top: 1.4rem;
+	}
+
+	/* Footer mobiel */
+
+	.site-footer {
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+		padding: 1.2rem 7% 0.8rem;
+	}
+
+	.footer-logo {
+		grid-column: 1 / -1;
+	}
+
+	.cookie-message {
+		right: 0.5rem;
+		bottom: 0.5rem;
+		left: 0.5rem;
+		max-width: none;
+	}
+
+}
+
+/* Nieuwsbrief formulier */
+
+.footer-form {
+	grid-column: 1 / -1;
+	max-width: 23rem;
+	margin-top: 0.5rem;
+}
+
+.footer-form fieldset {
+	border-color: #ffffff;
+	border-style: double;
+	border-width: 0.12rem;
+}
+
+.footer-form legend,
+.footer-form label {
+	font-size: 0.65rem;
+	font-weight: 600;
+}
+
+.footer-form label,
+.footer-form input {
+	display: block;
+	width: 100%;
+	margin-bottom: 0.4rem;
+}
+
+.footer-form input {
+	padding: 0.45rem;
+	font: inherit;
+	font-size: 0.7rem;
+}
+
+.footer-form input[type="submit"] {
+	background-color: #001dcc;
+	color: #ffffff;
+	font-weight: 700;
+}
+
+/* Float property voor assessment */
+
+.article-images figure:first-child {
+	float: left;
+}
+
+/* Extra HTML-elementen */
+
+.article-copy em {
+	font-style: italic;
+}
+
+.article-copy strong {
+	font-weight: 800;
+}
+
+.copy {
+    flex: 1 1 38%;
+}
+
+.copy p::first-letter {
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+.site-footer {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 45px 7% 65px;
+    background-color: #a17d56;
+    color: #ffffff;
+}
+
+.footer-brand img {
+    width: 90px;
+    height: auto;
+}
+
+.site-footer li {
+    margin-bottom: 7px;
+}
+
+.site-footer li strong {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.site-footer a {
+    font-size: 0.65rem;
+    text-transform: none;
+    letter-spacing: 0.02em;
+}
+
+.copyright {
+    position: absolute;
+    right: 7%;
+    bottom: 10px;
+    left: 7%;
+    margin: 0;
+    text-align: center;
+    font-size: 0.65rem;
+}
+
+.copyright {
+	grid-column: 1 / -1;
+	margin: 1rem 0 0;
+	font-size: 0.68rem;
+	text-align: center;
+}
+
+.cookie-message {
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	max-width: 32rem;
+	padding: 0.8rem 1rem;
+	border: 0.15rem double #ffffff;
+	background-color: #171717;
+	color: #ffffff;
+	box-shadow: 0 0.3rem 1rem rgb(0 0 0 / 25%);
+	font-size: 0.75rem;
+}
+
+.cookie-message p {
+	margin: 0;
+}
+
+.cookie-message a {
+	color: #00d7a0;
+	text-decoration: underline;
+}
+
+
+.site-header {
+    position: relative;
+    min-height: 64px;
+    padding: 12px 5%;
+    background-color: #a17d56;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    position: absolute;
+    left: 5%;
+    top: 10px;
+    display: block;
+}
+
+.logo img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.main-nav ul,
+.site-footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 34px;
+}
+
+.main-nav a,
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   Extra kleine smartphones
+   ========================================= */
+
+@media screen and (max-width: 420px) {
+
+	.main-nav ul {
+		gap: 0.4rem 0.55rem;
+	}
+
+	.main-nav a {
+		font-size: 0.46rem;
+	}
+
+	.article-images {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.site-footer {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.footer-nav a {
+		font-size: 0.58rem;
+	}
+
+}
