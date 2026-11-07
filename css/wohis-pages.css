@@ -1,682 +1,72 @@
 
 /* =========================================
    WOHiS - Algemene styling
-   ========================================= */
+========================================= */
 
+/* Zorgt ervoor dat padding en borders binnen de breedte vallen */
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
+/* Algemene instellingen voor de website */
 html {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 body {
-	margin: 0;
-	background-color: #f4eaff;
-	color: #171717;
-	font-family: "Montserrat", Arial, sans-serif;
-	line-height: 1.55;
-	word-spacing: 0.06em;
+    margin: 0;
+    background-color: #f4eaff;
+    color: #171717;
+    font-family: "Montserrat", Arial, sans-serif;
+    line-height: 1.55;
+    word-spacing: 0.06em;
 }
 
+/* Algemene styling voor links */
 a {
-	color: inherit;
-	text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 a:visited {
-	color: inherit;
+    color: inherit;
 }
 
 a:hover {
-	color: #00d59a;
+    color: #00d59a;
 }
 
 a:active {
-	color: #f2c94c;
+    color: #f2c94c;
 }
 
+/* Maakt links zichtbaar wanneer je met het toetsenbord navigeert */
 a:focus-visible {
-	outline: 3px solid #00d59a;
-	outline-offset: 3px;
+    outline: 3px solid #00d59a;
+    outline-offset: 3px;
 }
+
 
 /* =========================================
    Header en navigatie
-   ========================================= */
+========================================= */
 
-.site-header {
-	position: static;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 1rem;
-	min-height: 2.6rem;
-	padding: 0.35rem 3%;
-	background-color: #92734e;
-	color: #ffffff;
-}
-
-.brand {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.35rem;
-	flex-shrink: 0;
-}
-
-.brand-symbol {
-	display: grid;
-	place-items: center;
-	width: 1.7rem;
-	height: 1.7rem;
-	border: 0.15rem double #00d59a;
-	background-color: #050505;
-	color: #00d59a;
-	font-family: "Press Start 2P", monospace;
-	font-size: 0.75rem;
-}
-
-.brand-name {
-	font-size: 1.2rem;
-	font-weight: 800;
-	letter-spacing: 0.08em;
-}
-
-.brand-name span {
-	color: #00d59a;
-}
-
-.main-nav ul,
-.footer-nav ul {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1.1rem;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.main-nav a {
-	font-size: 0.58rem;
-	font-weight: 700;
-	letter-spacing: 0.06em;
-	text-transform: uppercase;
-}
-
-/* =========================================
-   Algemene pagina
-   ========================================= */
-
-.page-shell {
-	width: 100%;
-	max-width: 76rem;
-	margin: 0 auto;
-	background-color: #ffffff;
-}
-
-/* =========================================
-   Console War pagina
-   ========================================= */
-
-.console-hero {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	align-items: center;
-	gap: 2rem;
-	padding: 2rem 8% 1rem;
-}
-
-.console-hero figure {
-	margin: 0;
-}
-
-.console-hero img {
-	display: block;
-	width: 100%;
-	height: 11rem;
-	object-fit: contain;
-}
-
-.console-hero figcaption {
-	margin-top: 0.4rem;
-	font-size: 0.7rem;
-	text-align: center;
-}
-
-.page-title {
-	margin: 0;
-	padding: 0.8rem 1rem 1.5rem;
-	font-family: Georgia, "Times New Roman", serif;
-	font-size: clamp(1.5rem, 2.4vw, 2.1rem);
-	font-weight: 400;
-	text-align: center;
-}
-
-.console-content {
-	width: min(64%, 58rem);
-	margin: 0 auto;
-	padding: 2rem 4%;
-	background-color: #858000;
-}
-
-.console-content h2,
-.article-copy h1,
-.article-copy h2 {
-	margin: 0 0 0.6rem;
-	font-family: "Press Start 2P", monospace;
-	font-size: 0.75rem;
-	font-weight: 400;
-	line-height: 1.7;
-	text-transform: uppercase;
-}
-
-.console-content p,
-.article-copy p {
-	margin: 0 0 1.2rem;
-	font-size: 0.76rem;
-	line-height: 1.65;
-	text-indent: 1em;
-}
-
-.console-content p::first-letter,
-.article-copy p::first-letter {
-	font-size: 1.15em;
-	font-weight: 700;
-}
-
-.console-content section {
-	margin-bottom: 1.5rem;
-}
-
-.console-content section:last-child {
-	margin-bottom: 0;
-}
-
-/* =========================================
-   Artikelpagina's
-   ========================================= */
-
-.article-page {
-	display: grid;
-	grid-template-columns: 10% 1fr 10%;
-	align-items: stretch;
-}
-
-.article-numbering {
-	grid-column: 1;
-	grid-row: 1;
-	padding: 1.4rem 0.5rem;
-	background-color: #ffffff;
-}
-
-.article-numbering ol {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 24rem;
-	margin: 0;
-	padding-left: 1.8rem;
-	font-family: Georgia, "Times New Roman", serif;
-	font-size: 1.8rem;
-}
-
-.article-content {
-	grid-column: 2;
-	grid-row: 1;
-	padding: 2rem 9%;
-	background-color: #858000;
-}
-
-.article-section {
-	margin-bottom: 2.4rem;
-}
-
-.article-section:last-child {
-	margin-bottom: 0;
-}
-
-.article-copy h1,
-.article-copy h2 {
-	margin-bottom: 0.7rem;
-}
-
-.article-copy p {
-	font-size: 0.72rem;
-}
-
-.article-images {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 1rem;
-	margin: 1.2rem 0;
-}
-
-.article-images figure {
-	margin: 0;
-}
-
-.article-images img {
-	display: block;
-	width: 100%;
-	height: 8rem;
-	object-fit: cover;
-	border-color: #92734e;
-	border-style: double;
-	border-width: 0.15rem;
-}
-
-.article-images figcaption {
-	margin-top: 0.3rem;
-	font-size: 0.62rem;
-}
-
-.article-images figure:nth-child(even) {
-	background-color: #ffffff;
-}
-
-.article-copy > p {
-	max-width: 52rem;
-}
-
-/* =========================================
-   Lees verder knop
-   ========================================= */
-
-.article-action {
-	display: block;
-	width: fit-content;
-	margin: 2rem auto 0;
-	padding: 0.55rem 1.5rem;
-	border: 0.12rem double #001dcc;
-	border-radius: 0.25rem;
-	background-color: #001dcc;
-	color: #ffffff;
-	font-size: 0.65rem;
-	font-weight: 800;
-	text-align: center;
-	text-transform: uppercase;
-}
-
-.article-action:visited {
-	color: #ffffff;
-}
-
-.article-action:hover {
-	border-color: #00d59a;
-	background-color: #00d59a;
-	color: #111111;
-}
-
-.article-action:active {
-	background-color: #92734e;
-	color: #ffffff;
-}
-
-/* =========================================
-   Footer
-   ========================================= */
-
-.site-footer {
-	position: relative;
-	display: grid;
-	grid-template-columns: 1.2fr 1fr 1fr 1fr;
-	gap: 1.4rem;
-	padding: 1.8rem 7% 1rem;
-	background-color: #92734e;
-	color: #ffffff;
-}
-
-.footer-logo .brand-symbol {
-	width: 2.8rem;
-	height: 2.8rem;
-	font-size: 1.1rem;
-}
-
-.footer-logo .brand-name {
-	display: block;
-	font-size: 1.6rem;
-}
-
-.footer-nav h2 {
-	margin: 0 0 0.5rem;
-	font-size: 0.8rem;
-	font-weight: 600;
-}
-
-.footer-nav ul {
-	display: block;
-}
-
-.footer-nav li {
-	margin-bottom: 0.2rem;
-}
-
-.footer-nav a {
-	font-size: 0.62rem;
-}
-
-.copyright {
-	grid-column: 1 / -1;
-	margin: 0.7rem 0 0;
-	font-size: 0.6rem;
-	text-align: center;
-}
-
-/* =========================================
-   Cookie melding
-   ========================================= */
-
-.cookie-message {
-	position: fixed;
-	right: 1rem;
-	bottom: 1rem;
-	z-index: 9999;
-	max-width: 20rem;
-	padding: 0.7rem 1rem;
-	border: 0.12rem double #ffffff;
-	background-color: #171717;
-	color: #ffffff;
-	font-size: 0.7rem;
-}
-
-.cookie-message p {
-	margin: 0;
-}
-
-/* =========================================
-   Tablet
-   ========================================= */
-
-@media screen and (max-width: 1024px) {
-
-	.console-content {
-		width: 76%;
-	}
-
-	.article-content {
-		padding-right: 7%;
-		padding-left: 7%;
-	}
-
-}
-
-/* =========================================
-   Smartphone - maximaal 768px
-   ========================================= */
-
-@media screen and (max-width: 768px) {
-
-	.site-header {
-		display: flex;
-		flex-direction: column;
-		gap: 0.45rem;
-		padding: 0.55rem 3%;
-	}
-
-	.brand-symbol {
-		width: 1.4rem;
-		height: 1.4rem;
-		font-size: 0.6rem;
-	}
-
-	.brand-name {
-		font-size: 0.9rem;
-	}
-
-	.main-nav ul {
-		justify-content: center;
-		gap: 0.5rem 0.8rem;
-	}
-
-	.main-nav a {
-		font-size: 0.52rem;
-	}
-
-	/* Console War afbeeldingen onder elkaar */
-
-	.console-hero {
-		grid-template-columns: 1fr;
-		gap: 0.7rem;
-		padding: 1.4rem 12% 0.5rem;
-	}
-
-	.console-hero img {
-		height: auto;
-		max-height: 10rem;
-	}
-
-	.console-hero figcaption {
-		font-size: 0.65rem;
-	}
-
-	.page-title {
-		padding: 0.8rem 1rem 1.2rem;
-		font-size: 1.35rem;
-	}
-
-	.console-content {
-		width: 100%;
-		padding: 1.5rem 7%;
-	}
-
-	.console-content h2,
-	.article-copy h1,
-	.article-copy h2 {
-		font-size: 0.68rem;
-	}
-
-	.console-content p,
-	.article-copy p {
-		font-size: 0.68rem;
-	}
-
-	/* Artikelpagina mobiel */
-
-	.article-page {
-		display: block;
-	}
-
-	.article-numbering {
-		display: none;
-	}
-
-	.article-content {
-		padding: 1.5rem 7%;
-	}
-
-	.article-section {
-		margin-bottom: 2.3rem;
-	}
-
-	.article-images {
-		gap: 0.6rem;
-	}
-
-	.article-images img {
-		height: auto;
-		max-height: 8rem;
-	}
-
-	.article-action {
-		margin-top: 1.4rem;
-	}
-
-	/* Footer mobiel */
-
-	.site-footer {
-		grid-template-columns: 1fr 1fr;
-		gap: 1rem;
-		padding: 1.2rem 7% 0.8rem;
-	}
-
-	.footer-logo {
-		grid-column: 1 / -1;
-	}
-
-	.cookie-message {
-		right: 0.5rem;
-		bottom: 0.5rem;
-		left: 0.5rem;
-		max-width: none;
-	}
-
-}
-
-/* Nieuwsbrief formulier */
-
-.footer-form {
-	grid-column: 1 / -1;
-	max-width: 23rem;
-	margin-top: 0.5rem;
-}
-
-.footer-form fieldset {
-	border-color: #ffffff;
-	border-style: double;
-	border-width: 0.12rem;
-}
-
-.footer-form legend,
-.footer-form label {
-	font-size: 0.65rem;
-	font-weight: 600;
-}
-
-.footer-form label,
-.footer-form input {
-	display: block;
-	width: 100%;
-	margin-bottom: 0.4rem;
-}
-
-.footer-form input {
-	padding: 0.45rem;
-	font: inherit;
-	font-size: 0.7rem;
-}
-
-.footer-form input[type="submit"] {
-	background-color: #001dcc;
-	color: #ffffff;
-	font-weight: 700;
-}
-
-/* Float property voor assessment */
-
-.article-images figure:first-child {
-	float: left;
-}
-
-/* Extra HTML-elementen */
-
-.article-copy em {
-	font-style: italic;
-}
-
-.article-copy strong {
-	font-weight: 800;
-}
-
-.copy {
-    flex: 1 1 38%;
-}
-
-.copy p::first-letter {
-    font-size: 1.25em;
-    font-weight: 700;
-}
-
-.site-footer {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 45px 7% 65px;
-    background-color: #a17d56;
-    color: #ffffff;
-}
-
-.footer-brand img {
-    width: 90px;
-    height: auto;
-}
-
-.site-footer li {
-    margin-bottom: 7px;
-}
-
-.site-footer li strong {
-    display: inline-block;
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-}
-
-.site-footer a {
-    font-size: 0.65rem;
-    text-transform: none;
-    letter-spacing: 0.02em;
-}
-
-.copyright {
-    position: absolute;
-    right: 7%;
-    bottom: 10px;
-    left: 7%;
-    margin: 0;
-    text-align: center;
-    font-size: 0.65rem;
-}
-
-.copyright {
-	grid-column: 1 / -1;
-	margin: 1rem 0 0;
-	font-size: 0.68rem;
-	text-align: center;
-}
-
-.cookie-message {
-	position: fixed;
-	right: 1rem;
-	bottom: 1rem;
-	z-index: 9999;
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-	max-width: 32rem;
-	padding: 0.8rem 1rem;
-	border: 0.15rem double #ffffff;
-	background-color: #171717;
-	color: #ffffff;
-	box-shadow: 0 0.3rem 1rem rgb(0 0 0 / 25%);
-	font-size: 0.75rem;
-}
-
-.cookie-message p {
-	margin: 0;
-}
-
-.cookie-message a {
-	color: #00d7a0;
-	text-decoration: underline;
-}
-
-
+/* Achtergrond en indeling van de header */
 .site-header {
     position: relative;
-    min-height: 64px;
-    padding: 12px 5%;
-    background-color: #a17d56;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 64px;
+    padding: 12px 5%;
+    background-color: #8F6F49;
+    color: #ffffff;
 }
 
+/* Logo links in de header */
 .logo {
     position: absolute;
-    left: 5%;
+    left: 8%;
     top: 10px;
     display: block;
 }
@@ -687,13 +77,46 @@ a:focus-visible {
     object-fit: contain;
 }
 
+/* Merknaam en logo-onderdelen */
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-shrink: 0;
+}
+
+.brand-symbol {
+    display: grid;
+    place-items: center;
+    width: 1.7rem;
+    height: 1.7rem;
+    border: 0.15rem double #00d59a;
+    background-color: #050505;
+    color: #00d59a;
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.75rem;
+}
+
+.brand-name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.brand-name span {
+    color: #00d59a;
+}
+
+/* Navigatie en footer gebruiken geen standaard lijst-opmaak */
 .main-nav ul,
+.footer-nav ul,
 .site-footer ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
+/* Navigatielinks naast elkaar plaatsen */
 .main-nav ul {
     display: flex;
     justify-content: center;
@@ -701,41 +124,762 @@ a:focus-visible {
     gap: 34px;
 }
 
-.main-nav a,
+/* Vormgeving van de navigatielinks */
+.main-nav a {
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   Algemene pagina
+========================================= */
+
+/* Houdt de inhoud van de website in het midden */
+.page-shell {
+    width: 100%;
+    max-width: 76rem;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+
+/* =========================================
+   Console War pagina
+========================================= */
+
+/* Plaatst de drie afbeeldingen naast elkaar */
+.console-hero {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 8% 1rem;
+}
+
+/* Verwijdert de standaardmarge van figure */
+.console-hero figure {
+    margin: 0;
+}
+
+/* Zorgt ervoor dat afbeeldingen netjes in hun vak passen */
+.console-hero img {
+    display: block;
+    width: 100%;
+    height: 11rem;
+    object-fit: contain;
+}
+
+/* Bijschrift onder de afbeeldingen */
+.console-hero figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+/* Algemene titel van de pagina */
+.page-title {
+    margin: 0;
+    padding: 0.8rem 1rem 1.5rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Achtergrond en breedte van de tekstinhoud */
+.console-content {
+    width: min(64%, 58rem);
+    margin: 0 auto;
+    padding: 2rem 4%;
+    background-color: #807809;
+}
+
+/* Koppen binnen de tekstinhoud */
+.console-content h2,
+.article-copy h1,
+.article-copy h2 {
+    margin: 0 0 0.6rem;
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.7;
+    text-transform: uppercase;
+}
+
+/* Algemene tekst binnen de Console War- en artikelpagina's */
+.console-content p,
+.article-copy p {
+    margin: 0 0 1.2rem;
+    font-size: 0.76rem;
+    line-height: 1.65;
+    text-indent: 1em;
+}
+
+/* Maakt de eerste letter van een alinea groter */
+.console-content p::first-letter,
+.article-copy p::first-letter {
+    font-size: 1.15em;
+    font-weight: 700;
+}
+
+/* Ruimte tussen de verschillende tekstonderdelen */
+.console-content section {
+    margin-bottom: 1.5rem;
+}
+
+.console-content section:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   Artikelpagina's
+========================================= */
+
+/* Verdeelt de artikelpagina in drie kolommen */
+.article-page {
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    align-items: stretch;
+}
+
+/* Nummering aan de linkerkant van het artikel */
+.article-numbering {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 1.4rem 0.5rem;
+    background-color: #ffffff;
+}
+
+/* Zet de artikelnummers onder elkaar */
+.article-numbering ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24rem;
+    margin: 0;
+    padding-left: 1.8rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+}
+
+/* Hoofdinhoud van het artikel */
+.article-content {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 2rem 9%;
+    background-color: #807809;
+}
+
+/* Ruimte tussen de verschillende artikelonderdelen */
+.article-section {
+    margin-bottom: 2.4rem;
+}
+
+.article-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Extra ruimte onder de koppen van artikelen */
+.article-copy h1,
+.article-copy h2 {
+    margin-bottom: 0.7rem;
+}
+
+/* Tekst iets kleiner maken op artikelpagina's */
+.article-copy p {
+    font-size: 0.72rem;
+}
+
+/* Plaatst artikelafbeeldingen in twee kolommen */
+.article-images {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.2rem 0;
+}
+
+/* Verwijdert de standaardmarge van afbeeldingen */
+.article-images figure {
+    margin: 0;
+}
+
+/* Vormgeving van de artikelafbeeldingen */
+.article-images img {
+    display: block;
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
+    border: 0.15rem double #92734e;
+}
+
+/* Bijschrift onder de artikelafbeeldingen */
+.article-images figcaption {
+    margin-top: 0.3rem;
+    font-size: 0.62rem;
+}
+
+/* Zorgt ervoor dat de tekst niet te breed wordt */
+.article-copy > p {
+    max-width: 52rem;
+}
+
+
+/* =========================================
+   Lees verder knop
+========================================= */
+
+/* Vormgeving en plaatsing van de knop */
+.article-action {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0;
+    padding: 0.55rem 1.5rem;
+    border: 0.12rem double #001dcc;
+    border-radius: 0.25rem;
+    background-color: #001dcc;
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Houdt de tekst wit wanneer de link bezocht is */
+.article-action:visited {
+    color: #ffffff;
+}
+
+/* Verandert de knop wanneer je eroverheen beweegt */
+.article-action:hover {
+    border-color: #00d59a;
+    background-color: #00d59a;
+    color: #111111;
+}
+
+/* Verandert de knop wanneer je erop klikt */
+.article-action:active {
+    background-color: #92734e;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   Footer
+========================================= */
+
+/* Achtergrond en indeling van de footer */
+.site-footer {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 45px 7% 65px;
+    background-color: #8F6F49;
+    color: #ffffff;
+}
+
+/* Logo in de footer */
+.footer-logo .brand-symbol {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.1rem;
+}
+
+.footer-logo .brand-name {
+    display: block;
+    font-size: 1.6rem;
+}
+
+/* Alternatieve afbeelding van het footerlogo */
+.footer-brand img {
+    width: 90px;
+    height: auto;
+}
+
+/* Koppen in de footer */
+.footer-nav h2 {
+    margin: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Zet de footerlinks onder elkaar */
+.footer-nav ul {
+    display: block;
+}
+
+.footer-nav li,
+.site-footer li {
+    margin-bottom: 7px;
+}
+
+/* Vormgeving van de footerlinks */
+.footer-nav a,
 .site-footer a {
     color: #ffffff;
+    font-size: 0.65rem;
+    letter-spacing: 0.02em;
     text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 0.72rem;
+    text-transform: none;
+    font-weight: 700;
+}
+
+/* Extra ruimte en opmaak voor belangrijke tekst in de footer */
+.site-footer li strong {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+/* Copyright onderaan de footer */
+.copyright {
+    position: absolute;
+    right: 7%;
+    bottom: 10px;
+    left: 7%;
+    margin: 0;
+    font-size: 0.65rem;
+    text-align: center;
+}
+
+
+/* =========================================
+   Nieuwsbrief formulier
+========================================= */
+
+/* Plaatsing en maximale breedte van het formulier */
+.footer-form {
+    flex: 1 1 100%;
+    max-width: 23rem;
+    margin-top: 0.5rem;
+}
+
+/* Rand om het formulier */
+.footer-form fieldset {
+    border: 0.12rem double #ffffff;
+}
+
+/* Vormgeving van de titel en labels */
+.footer-form legend,
+.footer-form label {
+    font-size: 0.65rem;
+    font-weight: 600;
+}
+
+/* Zet de labels en invoervelden onder elkaar */
+.footer-form label,
+.footer-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.4rem;
+}
+
+/* Vormgeving van de invoervelden */
+.footer-form input {
+    padding: 0.45rem;
+    font: inherit;
+    font-size: 0.7rem;
+}
+
+/* Vormgeving van de verzendknop */
+.footer-form input[type="submit"] {
+    background-color: #001dcc;
+    color: #ffffff;
     font-weight: 700;
 }
 
 
 /* =========================================
-   Extra kleine smartphones
-   ========================================= */
+   Cookie melding
+========================================= */
+
+/* Houdt de cookie melding vast op het scherm */
+.cookie-message {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 32rem;
+    padding: 0.8rem 1rem;
+    border: 0.15rem double #ffffff;
+    background-color: #171717;
+    color: #ffffff;
+    box-shadow: 0 0.3rem 1rem rgb(0 0 0 / 25%);
+    font-size: 0.75rem;
+}
+
+/* Verwijdert de standaardmarge van de tekst */
+.cookie-message p {
+    margin: 0;
+}
+
+/* Link in de cookie melding */
+.cookie-message a {
+    color: #00d7a0;
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   Extra HTML-elementen
+========================================= */
+
+/* Cursieve tekst */
+.article-copy em {
+    font-style: italic;
+}
+
+/* Belangrijke tekst dikgedrukt weergeven */
+.article-copy strong {
+    font-weight: 800;
+}
+
+/* Flexibele breedte van het tekstgedeelte */
+.copy {
+    flex: 1 1 38%;
+}
+
+/* Maakt de eerste letter van de tekst groter */
+.copy p::first-letter {
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+/* Float property voor de assessment */
+.article-images figure:first-child {
+    float: left;
+}
+
+
+/* =========================================
+   Tablet - maximaal 1024px
+========================================= */
+
+@media screen and (max-width: 1024px) {
+
+    /* Maakt het tekstgedeelte breder op tablets */
+    .console-content {
+        width: 76%;
+    }
+
+    /* Past de ruimte rondom de artikeltekst aan */
+    .article-content {
+        padding-right: 7%;
+        padding-left: 7%;
+    }
+
+}
+
+
+/* =========================================
+   Smartphone - maximaal 768px
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Zet de headeronderdelen onder elkaar */
+    .site-header {
+        flex-direction: column;
+        gap: 0.45rem;
+        padding: 0.55rem 3%;
+    }
+
+    /* Maakt het merksymbool kleiner */
+    .brand-symbol {
+        width: 1.4rem;
+        height: 1.4rem;
+        font-size: 0.6rem;
+    }
+
+    /* Maakt de merknaam kleiner */
+    .brand-name {
+        font-size: 0.9rem;
+    }
+
+    /* Centreert de navigatie op mobiel */
+    .main-nav ul {
+        justify-content: center;
+        gap: 0.5rem 0.8rem;
+    }
+
+    .main-nav a {
+        font-size: 0.52rem;
+    }
+
+    /* Zet de Console War-afbeeldingen onder elkaar */
+    .console-hero {
+        grid-template-columns: 1fr;
+        gap: 0.7rem;
+        padding: 1.4rem 12% 0.5rem;
+    }
+
+    /* Past de afbeeldingen aan op de mobiele breedte */
+    .console-hero img {
+        height: auto;
+        max-height: 10rem;
+    }
+
+    .console-hero figcaption {
+        font-size: 0.65rem;
+    }
+
+    /* Past de paginatitel aan */
+    .page-title {
+        padding: 0.8rem 1rem 1.2rem;
+        font-size: 1.35rem;
+    }
+
+    /* Laat de tekstinhoud de volledige breedte gebruiken */
+    .console-content {
+        width: 100%;
+        padding: 1.5rem 7%;
+    }
+
+    /* Maakt de koppen kleiner */
+    .console-content h2,
+    .article-copy h1,
+    .article-copy h2 {
+        font-size: 0.68rem;
+    }
+
+    /* Maakt de tekst kleiner */
+    .console-content p,
+    .article-copy p {
+        font-size: 0.68rem;
+    }
+
+    /* Zet de artikelpagina om naar een enkele kolom */
+    .article-page {
+        display: block;
+    }
+
+    /* Verbergt de artikelnummers op mobiel */
+    .article-numbering {
+        display: none;
+    }
+
+    /* Past de ruimte rondom de artikeltekst aan */
+    .article-content {
+        padding: 1.5rem 7%;
+    }
+
+    .article-section {
+        margin-bottom: 2.3rem;
+    }
+
+    /* Verkleint de ruimte tussen afbeeldingen */
+    .article-images {
+        gap: 0.6rem;
+    }
+
+    .article-images img {
+        height: auto;
+        max-height: 8rem;
+    }
+
+    /* Past de afstand boven de lees verder knop aan */
+    .article-action {
+        margin-top: 1.4rem;
+    }
+
+    /* Past de footer aan voor mobiele schermen */
+    .site-footer {
+        justify-content: flex-start;
+        gap: 1rem;
+        padding: 1.2rem 7% 3.5rem;
+    }
+
+    /* Verkleint de footeronderdelen */
+    .footer-nav {
+        flex: 1 1 40%;
+    }
+
+    .footer-nav a {
+        font-size: 0.58rem;
+    }
+
+    /* Past het footerlogo aan */
+    .footer-logo,
+    .footer-brand {
+        flex: 1 1 100%;
+    }
+
+    /* Verkleint de cookie melding en laat deze over de breedte lopen */
+    .cookie-message {
+        right: 0.5rem;
+        bottom: 0.5rem;
+        left: 0.5rem;
+        max-width: none;
+    }
+
+}
+
+/* =================================
+   MOBIEL EN KLEINE TABLETS
+================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Maakt de header hoger en geeft ruimte voor het logo */
+    .site-header {
+        min-height: 74px;
+        padding: 12px 14px 12px 62px;
+    }
+
+    /* Verplaatst het logo naar links op mobiele schermen */
+    .logo {
+        left: 12px;
+        top: 15px;
+    }
+
+    /* Verkleint het logo op mobiel */
+    .logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    /* Verkleint de ruimte tussen navigatielinks */
+    .main-nav ul {
+        gap: 7px 14px;
+    }
+
+    /* Verkleint de navigatietekst */
+    .main-nav a {
+        font-size: 0.55rem;
+    }
+
+    /* Laat hoofdsecties de volledige schermbreedte gebruiken */
+    main > section {
+        width: 100%;
+    }
+
+    /* Verkleint de minimale hoogte van het hero-gedeelte */
+    .hero {
+        min-height: 230px;
+    }
+
+    /* Verkleint de hero-afbeelding */
+    .hero > img {
+        height: 230px;
+    }
+
+    /* Past de positie en breedte van de hero-tekst aan */
+    .hero-copy {
+        top: 12%;
+        right: 5%;
+        max-width: 230px;
+    }
+
+    /* Verkleint de H1-koppen */
+    h1 {
+        font-size: 1.55rem;
+    }
+
+    /* Zet inhoudsrijen op mobiel onder elkaar */
+    .content-row,
+    .content-row.reverse {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        padding: 28px 7%;
+    }
+
+    /* Laat afbeeldingen en tekst de volledige breedte gebruiken */
+    .content-row figure,
+    .copy {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    /* Zet de tekst onder de afbeelding bij omgekeerde inhoudsrijen */
+    .content-row.reverse .copy {
+        order: 2;
+    }
+
+    /* Zet de afbeelding boven de tekst bij omgekeerde inhoudsrijen */
+    .content-row.reverse figure {
+        order: 1;
+    }
+
+    /* Verkleint H2-koppen binnen het tekstgedeelte */
+    .copy h2 {
+        font-size: 1.3rem;
+    }
+
+    /* Past de alinea's aan voor mobiel */
+    .copy p {
+        font-size: 0.85rem;
+    }
+
+
+    /* Footer: verandert de flex-indeling naar een raster met twee kolommen */
+    .site-footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Twee even brede kolommen */
+        gap: 24px;
+        padding: 30px 7% 65px;
+    }
+
+    /* Laat het footerlogo beide kolommen gebruiken */
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    /* Verkleint het footerlogo op mobiel */
+    .footer-brand img {
+        width: 65px;
+    }
+
+    /* Verkleint de copyrighttekst op mobiel */
+    .copyright {
+        font-size: 0.55rem;
+    }
+
+    /* Verplaatst de cookiemelding dichter naar de rand en maakt deze smaller */
+    .cookie-message {
+        right: 8px;
+        bottom: 8px;
+        max-width: 230px;
+    }
+
+    /* Zet afbeeldingen die normaal links zweven op mobiel boven de tekst */
+    .article-image {
+        float: none;
+        width: 100%;
+        margin: 0 0 14px;
+    }
+}
+
+
+/* =========================================
+   Extra kleine smartphones - maximaal 420px
+========================================= */
 
 @media screen and (max-width: 420px) {
 
-	.main-nav ul {
-		gap: 0.4rem 0.55rem;
-	}
+    /* Verkleint de ruimte tussen navigatielinks */
+    .main-nav ul {
+        gap: 0.4rem 0.55rem;
+    }
 
-	.main-nav a {
-		font-size: 0.46rem;
-	}
+    /* Maakt de navigatietekst kleiner */
+    .main-nav a {
+        font-size: 0.46rem;
+    }
 
-	.article-images {
-		grid-template-columns: 1fr 1fr;
-	}
-
-	.site-footer {
-		grid-template-columns: 1fr 1fr;
-	}
-
-	.footer-nav a {
-		font-size: 0.58rem;
-	}
+    /* Houdt de artikelafbeeldingen in twee kolommen */
+    .article-images {
+        grid-template-columns: 1fr 1fr;
+    }
 
 }

@@ -1,360 +1,471 @@
-/* Algemene basis en kleurenschema */
+
+/* =================================
+   ALGEMENE INSTELLINGEN EN KLEURENSCHEMA
+================================= */
+
+/* Zorgt ervoor dat padding en borders worden meegerekend in de totale breedte en hoogte */
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
+/* Stelt de standaard lettergrootte in en zorgt voor soepel scrollen */
 html {
-	font-size: 16px;
-	scroll-behavior: smooth;
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
 
+/* Algemene instellingen voor de hele website */
 body {
-	margin: 0;
-	background-color: #f4ecff;
-	color: #171717;
-	font-family: "Montserrat", Arial, sans-serif;
-	line-height: 1.6;
-	word-spacing: 0.08em;
+    margin: 0; /* Verwijdert de standaard buitenmarge */
+    background-color: #f4ecff; /* Achtergrondkleur van de website */
+    color: #171717; /* Standaard tekstkleur */
+    font-family: "Montserrat", Arial, sans-serif; /* Standaard lettertype */
+    line-height: 1.6; /* Ruimte tussen tekstregels */
+    word-spacing: 0.08em; /* Extra ruimte tussen woorden */
 }
 
+/* Algemene vormgeving van links */
 a {
-	color: inherit;
-	text-decoration: none;
+    color: inherit; /* Neemt de tekstkleur van het omliggende element over */
+    text-decoration: none; /* Verwijdert de standaard onderstreping */
 }
 
+/* Behoudt de oorspronkelijke tekstkleur van bezochte links */
 a:visited {
-	color: inherit;
+    color: inherit;
 }
 
+/* Verandert de linkkleur wanneer de muis eroverheen gaat */
 a:hover {
-	color: #00d7a0;
+    color: #00d7a0;
 }
 
+/* Verandert de linkkleur wanneer erop wordt geklikt */
 a:active {
-	color: #ffcf4a;
+    color: #ffcf4a;
 }
 
+/* Maakt geselecteerde links en invoervelden duidelijk zichtbaar bij toetsenbordgebruik */
 a:focus-visible,
 input:focus-visible {
-	outline: 3px solid #00d7a0;
-	outline-offset: 3px;
+    outline: 3px solid #00d7a0;
+    outline-offset: 3px;
 }
 
+
+/* =================================
+   HEADER EN NAVIGATIE
+================================= */
+
+/* Vormgeving en uitlijning van de bovenste navigatiebalk */
 .site-header {
-	position: static;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 2rem;
-	padding: 1rem 4%;
-	background-color: #92734e;
-	color: #ffffff;
+    position: relative; /* Maakt de header het referentiepunt voor absoluut gepositioneerde elementen */
+    min-height: 64px; /* Minimale hoogte van de header */
+    padding: 12px 5%; /* Binnenruimte boven/onder en links/rechts */
+    background-color: #8F6F49; /* Achtergrondkleur van de header */
+    display: flex; /* Gebruikt Flexbox voor de indeling */
+    align-items: center; /* Centreert de inhoud verticaal */
+    justify-content: center; /* Centreert de navigatie horizontaal */
 }
 
-.brand {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.55rem;
+/* Plaatst het logo links in de header */
+.logo {
+    position: absolute; /* Haalt het logo uit de normale flex-indeling */
+    left: 8%; /* Afstand vanaf de linkerkant */
+    top: 10px; /* Afstand vanaf de bovenkant */
+    display: block;
 }
 
-.brand-mark {
-	display: inline-grid;
-	place-items: center;
-	width: 2.5rem;
-	height: 2.5rem;
-	background-color: #050505;
-	color: #00d7a0;
-	font-family: "Press Start 2P", monospace;
-	font-size: 1rem;
-	border: 0.2rem double #00d7a0;
+/* Bepaalt de afmetingen en weergave van het logo */
+.logo img {
+    width: 42px; /* Breedte van het logo */
+    height: 42px; /* Hoogte van het logo */
+    object-fit: contain; /* Behoudt de volledige afbeelding zonder vervorming */
 }
 
-.brand-name {
-	font-size: 1.55rem;
-	font-weight: 800;
-	letter-spacing: 0.08em;
-}
-
-.brand-name span {
-	color: #00d7a0;
-}
-
+/* Verwijdert standaard marges, padding en opsommingstekens uit de navigatie- en footer-lijsten */
 .main-nav ul,
-.footer-nav ul {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1.5rem;
-	margin: 0;
-	padding: 0;
-	list-style: none;
+.site-footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
+/* Zet de navigatielinks naast elkaar */
+.main-nav ul {
+    display: flex;
+    justify-content: center; /* Centreert de navigatielinks */
+    flex-wrap: wrap; /* Laat links naar een volgende regel gaan als dat nodig is */
+    gap: 34px; /* Ruimte tussen de links */
+}
+
+/* Algemene vormgeving van de links in de header en footer */
 .main-nav a,
-.footer-nav a {
-	font-size: 0.75rem;
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase; /* Zet tekst om naar hoofdletters */
+    letter-spacing: 0.08em; /* Ruimte tussen letters */
+    font-size: 0.72rem; /* Tekstgrootte */
+    font-weight: 700; /* Maakt de tekst dikgedrukt */
 }
 
+
+/* =================================
+   BRAND EN LOGO
+================================= */
+
+/* Plaatst het merksymbool en de merknaam naast elkaar */
+.brand {
+    display: inline-flex;
+    align-items: center; /* Lijnt de onderdelen verticaal uit */
+    gap: 0.55rem; /* Ruimte tussen het symbool en de naam */
+}
+
+/* Vormgeving van het vierkante merksymbool */
+.brand-mark {
+    display: inline-grid;
+    place-items: center; /* Centreert de inhoud horizontaal en verticaal */
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #050505;
+    color: #00d7a0;
+    font-family: "Press Start 2P", monospace; /* Pixellettertype */
+    font-size: 1rem;
+    border: 0.2rem double #00d7a0; /* Dubbele rand */
+}
+
+/* Vormgeving van de merknaam */
+.brand-name {
+    font-size: 1.55rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+/* Geeft een afwijkende kleur aan een deel van de merknaam */
+.brand-name span {
+    color: #00d7a0;
+}
+
+
+/* =================================
+   PAGINA INTRODUCTIE EN KOPPEN
+================================= */
+
+/* Ruimte en uitlijning van de introductie bovenaan de pagina */
 .page-heading {
-	padding: 3rem 8% 2rem;
-	text-align: center;
+    padding: 3rem 8%; /* Binnenruimte boven/onder en links/rechts */
+    text-align: center; /* Centreert de inhoud */
 }
 
+/* Gebruikt het pixellettertype voor de belangrijkste koppen */
 .page-heading h1,
 .story-copy h2,
 .extra-info h2 {
-	font-family: "Press Start 2P", monospace;
-	font-weight: 400;
-	line-height: 1.5;
+    font-family: "Press Start 2P", monospace;
+    font-weight: 400;
+    line-height: 1.5; /* Ruimte tussen tekstregels */
 }
 
+/* Vormgeving van de hoofdkop */
 .page-heading h1 {
-	max-width: 58rem;
-	margin: 0.5rem auto 1rem;
-	font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+    max-width: 58rem; /* Maximale breedte van de kop */
+    margin: 0.5rem auto 1rem; /* Centreert de kop en voegt ruimte toe */
+    font-size: clamp(1.1rem, 2.5vw, 1.8rem); /* Past de lettergrootte aan het scherm aan */
 }
 
+/* Beperkt de breedte van de laatste introductieparagraaf */
 .page-heading > p:last-child {
-	max-width: 42rem;
-	margin: 0 auto;
-	text-indent: 1em;
+    max-width: 42rem;
+    margin: 0 auto; /* Centreert de paragraaf */
+    text-indent: 1em; /* Laat de eerste regel inspringen */
 }
 
+/* Vormgeving van de kleine tekst boven een kop */
 .eyebrow {
-	margin: 0 0 0.8rem;
-	color: #55421f;
-	font-size: 0.7rem;
-	font-weight: 800;
-	letter-spacing: 0.16em;
-	text-transform: uppercase;
+    margin: 0 0 0.8rem;
+    color: #55421f;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
 }
 
+
+/* =================================
+   VERHAALSECTIES EN INHOUD
+================================= */
+
+/* Plaatst de verhaalsecties onder elkaar */
 .story-list {
-	display: grid;
-	grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr; /* Gebruikt één kolom */
 }
 
+/* Zet de afbeelding en tekst naast elkaar */
 .story {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 5%;
-	padding: 4rem 8%;
-}
-
-.story-green {
-	background-color: #858000;
-}
-
-.story-light {
-	background-color: #ffffff;
-}
-
-.story-image {
-	float: left;
-	flex: 0 1 44%;
-	margin: 0;
-}
-
-.story-image img {
-	display: block;
-	width: 100%;
-	height: auto;
-	aspect-ratio: 4 / 3;
-	object-fit: cover;
-	border-color: #92734e;
-	border-style: double;
-	border-width: 0.2rem;
-	border-radius: 0.35rem;
-}
-
-.story-image figcaption {
-	margin-top: 0.45rem;
-	font-size: 0.7rem;
-	font-style: italic;
-}
-
-.story-copy {
-	flex: 0 1 42%;
-	max-width: 34rem;
-}
-
-.story-copy h2 {
-	margin: 0 0 1rem;
-	font-size: clamp(0.9rem, 1.5vw, 1.2rem);
-	text-align: center;
-}
-
-.story-copy p:not(.eyebrow) {
-	font-size: 0.82rem;
-	line-height: 1.8;
-	text-indent: 1.2em;
-}
-
-.story-copy p:not(.eyebrow)::first-letter {
-	font-size: 1.5em;
-	font-weight: 800;
-}
-
-.button-link {
-	display: inline-block;
-	margin-top: 0.8rem;
-	padding: 0.7rem 1.5rem;
-	border: 0.15rem double #001cce;
-	border-radius: 0.35rem;
-	background-color: #001cce;
-	color: #ffffff;
-	font-size: 0.7rem;
-	font-weight: 800;
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 0.04em;
-}
-
-.button-link:visited {
-	color: #ffffff;
-}
-
-.button-link:hover {
-	border-color: #00d7a0;
-	background-color: #00d7a0;
-	color: #111111;
-}
-
-.button-link:active {
-	background-color: #92734e;
-	color: #ffffff;
-}
-
-.extra-info {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 2rem;
-	padding: 3rem 8%;
-	background-color: #f4ecff;
-}
-
-.extra-info > section {
-	padding: 1.2rem;
-	border-color: #92734e;
-	border-style: double;
-	border-width: 0.2rem;
-}
-
-.extra-info h2 {
-	font-size: 0.8rem;
-}
-
-.extra-info p {
-	font-size: 0.82rem;
-}
-
-.facts table {
-	width: 100%;
-	border-collapse: collapse;
-	font-size: 0.72rem;
-}
-
-.facts th,
-.facts td {
-	padding: 0.55rem;
-	border-bottom: 1px solid #92734e;
-	text-align: left;
-}
-
-.facts tbody tr:nth-child(even) {
-	background-color: #CFF;
-}
-
-.facts tbody tr:nth-child(odd) {
-	background-color: #FFF;
-}
-
-.newsletter fieldset {
-	padding: 0.8rem;
-	border-color: #92734e;
-	border-style: double;
-	border-width: 0.2rem;
-}
-
-.newsletter legend {
-	font-weight: 800;
-}
-
-.newsletter label,
-.newsletter input {
-	display: block;
-	width: 100%;
-	margin-bottom: 0.6rem;
-}
-
-.newsletter input {
-	padding: 0.65rem;
-	border: 1px solid #92734e;
-	border-radius: 0.2rem;
-	font: inherit;
-}
-
-.newsletter input[type="submit"] {
-	border-color: #001cce;
-	background-color: #001cce;
-	color: #ffffff;
-	font-weight: 800;
-	text-transform: uppercase;
-	cursor: pointer;
-}
-
-/*
-	FOOTER
-*/
-
-.copy {
-    flex: 1 1 38%;
-}
-
-.copy p::first-letter {
-    font-size: 1.25em;
-    font-weight: 700;
-}
-
-.site-footer {
     position: relative;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 45px 7% 65px;
-    background-color: #a17d56;
+    align-items: center; /* Centreert de onderdelen verticaal */
+    justify-content: center; /* Centreert de onderdelen horizontaal */
+    gap: 5%; /* Ruimte tussen afbeelding en tekst */
+    padding: 4rem 8%; /* Binnenruimte rondom de inhoud */
+}
+
+/* Geeft bepaalde verhaalsecties een groene achtergrond */
+.story-green {
+    background-color: #807809;
+}
+
+/* Geeft bepaalde verhaalsecties een witte achtergrond */
+.story-light {
+    background-color: #ffffff;
+}
+
+/* Bepaalt de breedte en positie van de verhaalafbeelding */
+.story-image {
+    float: left;
+    flex: 0 1 44%; /* Basisbreedte van 44%, mag krimpen */
+    margin: 0; /* Verwijdert de standaard figure-marge */
+}
+
+/* Zorgt dat de afbeelding de beschikbare breedte vult */
+.story-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3; /* Houdt de beeldverhouding 4:3 aan */
+    object-fit: cover; /* Vult het afbeeldingsvak zonder vervorming */
+    border-color: #92734e;
+    border-style: double;
+    border-width: 0.2rem;
+    border-radius: 0.35rem; /* Licht afgeronde hoeken */
+}
+
+/* Vormgeving van het bijschrift onder de afbeelding */
+.story-image figcaption {
+    margin-top: 0.45rem;
+    font-size: 0.7rem;
+    font-style: italic; /* Schuingedrukte tekst */
+}
+
+/* Bepaalt de breedte van het verhaaltekstgedeelte */
+.story-copy {
+    flex: 0 1 42%;
+    max-width: 34rem;
+}
+
+/* Vormgeving en uitlijning van de verhaalonderwerpen */
+.story-copy h2 {
+    margin: 0 0 1rem;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem); /* Responsieve lettergrootte */
+    text-align: center;
+}
+
+/* Vormgeving van de verhaalparagrafen, behalve de eyebrow-tekst */
+.story-copy p:not(.eyebrow) {
+    font-size: 0.82rem;
+    line-height: 1.8;
+    text-indent: 1.2em; /* Laat de eerste regel inspringen */
+}
+
+/* Maakt de eerste letter van iedere verhaalparagraaf groter en dikker */
+.story-copy p:not(.eyebrow)::first-letter {
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+
+/* =================================
+   KNOPPEN EN CTA-LINKS
+================================= */
+
+/* Algemene vormgeving van de knoppen */
+.button-link {
+    display: inline-block; /* Maakt het mogelijk om padding toe te passen */
+    margin-top: 0.8rem;
+    padding: 0.7rem 1.5rem;
+    border: 0.15rem double #001cce; /* Dubbele blauwe rand */
+    border-radius: 0.35rem;
+    background-color: #001cce;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Behoudt de witte tekstkleur nadat een knop is bezocht */
+.button-link:visited {
     color: #ffffff;
 }
 
-.footer-brand img {
-    width: 90px;
-    height: auto;
+/* Verandert de achtergrond en rand wanneer de muis over de knop gaat */
+.button-link:hover {
+    border-color: #00d7a0;
+    background-color: #00d7a0;
+    color: #111111;
 }
 
+/* Verandert de achtergrondkleur zolang de knop wordt ingedrukt */
+.button-link:active {
+    background-color: #92734e;
+    color: #ffffff;
+}
+
+
+/* =================================
+   EXTRA INFORMATIE SECTIES
+================================= */
+
+/* Verdeelt de extra informatie over drie kolommen */
+.extra-info {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Drie even brede kolommen */
+    gap: 2rem; /* Ruimte tussen de kolommen */
+    padding: 3rem 8%;
+    background-color: #f4ecff;
+}
+
+/* Geeft iedere informatiekolom binnenruimte en een dubbele rand */
+.extra-info > section {
+    padding: 1.2rem;
+    border-color: #92734e;
+    border-style: double;
+    border-width: 0.2rem;
+}
+
+/* Vormgeving van de koppen binnen de extra informatie */
+.extra-info h2 {
+    font-size: 0.8rem;
+}
+
+/* Vormgeving van de tekst binnen de extra informatie */
+.extra-info p {
+    font-size: 0.82rem;
+}
+
+
+/* =================================
+   FACTS TABEL
+================================= */
+
+/* Laat de tabel de volledige beschikbare breedte gebruiken */
+.facts table {
+    width: 100%;
+    border-collapse: collapse; /* Voegt aangrenzende tabelranden samen */
+    font-size: 0.72rem;
+}
+
+/* Vormgeving van de tabelkoppen en tabelcellen */
+.facts th,
+.facts td {
+    padding: 0.55rem; /* Ruimte rondom de inhoud */
+    border-bottom: 1px solid #92734e;
+    text-align: left;
+}
+
+/* Geeft even rijen een lichtblauwe achtergrond */
+.facts tbody tr:nth-child(even) {
+    background-color: #CFF;
+}
+
+/* Geeft oneven rijen een witte achtergrond */
+.facts tbody tr:nth-child(odd) {
+    background-color: #FFF;
+}
+
+
+/* =================================
+   NIEUWSBRIEF FORMULIER
+================================= */
+
+/* Ruimte en dubbele rand rondom het nieuwsbrief formulier */
+.newsletter fieldset {
+    padding: 0.8rem;
+    border-color: #92734e;
+    border-style: double;
+    border-width: 0.2rem;
+}
+
+/* Maakt de titel van het formulier dikgedrukt */
+.newsletter legend {
+    font-weight: 800;
+}
+
+/* Plaatst de labels en invoervelden onder elkaar */
+.newsletter label,
+.newsletter input {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.6rem;
+}
+
+/* Vormgeving van de invoervelden */
+.newsletter input {
+    padding: 0.65rem;
+    border: 1px solid #92734e;
+    border-radius: 0.2rem;
+    font: inherit; /* Gebruikt hetzelfde lettertype als de rest van het formulier */
+}
+
+/* Vormgeving van de verzendknop */
+.newsletter input[type="submit"] {
+    border-color: #001cce;
+    background-color: #001cce;
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer; /* Verandert de muisaanwijzer in een handje */
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+/* Vormgeving en indeling van de onderste navigatiebalk */
+.site-footer {
+    position: relative; /* Referentiepunt voor de copyrighttekst */
+    display: flex; /* Zet de footer-onderdelen naast elkaar */
+    align-items: flex-start; /* Lijnt de onderdelen bovenaan uit */
+    justify-content: space-between; /* Verdeelt de onderdelen over de beschikbare breedte */
+    flex-wrap: wrap; /* Laat onderdelen naar een volgende regel gaan als dat nodig is */
+    gap: 30px; /* Ruimte tussen de footer-onderdelen */
+    padding: 45px 7% 65px; /* Binnenruimte boven, links/rechts en onder */
+    background-color: #8F6F49; /* Achtergrondkleur van de footer */
+    color: #ffffff; /* Standaard tekstkleur */
+}
+
+/* Bepaalt de breedte van het logo in de footer */
+.footer-brand img {
+    width: 90px;
+    height: auto; /* Behoudt de oorspronkelijke verhouding */
+}
+
+/* Geeft ruimte onder ieder lijstonderdeel in de footer */
 .site-footer li {
     margin-bottom: 7px;
 }
 
+/* Vormgeving van de titels boven de footer-linklijsten */
 .site-footer li strong {
     display: inline-block;
-    margin-bottom: 8px;
+    margin-bottom: 8px; /* Ruimte onder de titel */
     font-size: 0.9rem;
 }
 
+/* Past de footer-links aan ten opzichte van de algemene navigatielinks */
 .site-footer a {
     font-size: 0.65rem;
-    text-transform: none;
+    text-transform: none; /* Behoudt normale hoofd- en kleine letters */
     letter-spacing: 0.02em;
 }
 
+/* Plaatst de copyrighttekst onderaan en centreert deze */
 .copyright {
-    position: absolute;
+    position: absolute; /* Plaatst de tekst los van de normale flex-indeling */
     right: 7%;
     bottom: 10px;
     left: 7%;
@@ -363,63 +474,72 @@ input:focus-visible {
     font-size: 0.65rem;
 }
 
-.copyright {
-	grid-column: 1 / -1;
-	margin: 1rem 0 0;
-	font-size: 0.68rem;
-	text-align: center;
-}
 
+/* =================================
+   COOKIE MELDING
+================================= */
+
+/* Plaatst de cookiemelding vast rechtsonder op het scherm */
 .cookie-message {
-	position: fixed;
-	right: 1rem;
-	bottom: 1rem;
-	z-index: 9999;
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-	max-width: 32rem;
-	padding: 0.8rem 1rem;
-	border: 0.15rem double #ffffff;
-	background-color: #171717;
-	color: #ffffff;
-	box-shadow: 0 0.3rem 1rem rgb(0 0 0 / 25%);
-	font-size: 0.75rem;
+    position: fixed; /* Blijft op dezelfde plek tijdens het scrollen */
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 9999; /* Zorgt dat de melding boven andere elementen staat */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 32rem;
+    padding: 0.8rem 1rem;
+    border: 0.15rem double #ffffff;
+    background-color: #171717;
+    color: #ffffff;
+    box-shadow: 0 0.3rem 1rem rgb(0 0 0 / 25%); /* Schaduw rondom de melding */
+    font-size: 0.75rem;
 }
 
+/* Verwijdert de standaardmarge van de tekst in de cookiemelding */
 .cookie-message p {
-	margin: 0;
+    margin: 0;
 }
 
+/* Vormgeving van de link in de cookiemelding */
 .cookie-message a {
-	color: #00d7a0;
-	text-decoration: underline;
+    color: #00d7a0;
+    text-decoration: underline;
 }
 
 
+/* =================================
+   HEADER EN NAVIGATIE - AANVULLENDE STIJLEN
+================================= */
+
+/* Aanvullende vormgeving van de header */
 .site-header {
     position: relative;
     min-height: 64px;
     padding: 12px 5%;
-    background-color: #a17d56;
+    background-color: #8F6F49;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Plaatst het logo links in de header */
 .logo {
     position: absolute;
-    left: 5%;
+    left: 8%; /* Afstand vanaf de linkerkant */
     top: 10px;
     display: block;
 }
 
+/* Bepaalt de afmetingen van het logo */
 .logo img {
     width: 42px;
     height: 42px;
     object-fit: contain;
 }
 
+/* Verwijdert standaard opmaak van de navigatie- en footer-lijsten */
 .main-nav ul,
 .site-footer ul {
     margin: 0;
@@ -427,6 +547,7 @@ input:focus-visible {
     list-style: none;
 }
 
+/* Zet de navigatielinks horizontaal naast elkaar */
 .main-nav ul {
     display: flex;
     justify-content: center;
@@ -434,6 +555,7 @@ input:focus-visible {
     gap: 34px;
 }
 
+/* Vormgeving van navigatie- en footerlinks */
 .main-nav a,
 .site-footer a {
     color: #ffffff;
@@ -444,136 +566,299 @@ input:focus-visible {
     font-weight: 700;
 }
 
-/* Tablet en kleinere laptops */
+
+/* =========================================
+   Footer - Algemene instellingen
+========================================= */
+
+/* Dezelfde footer-indeling op alle pagina's */
+.site-footer {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 45px 7% 65px;
+    background-color: #8F6F49;
+    color: #ffffff;
+}
+
+/* Logo in de footer */
+.footer-logo .brand-symbol {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.1rem;
+}
+
+.footer-logo .brand-name {
+    display: block;
+    font-size: 1.6rem;
+}
+
+/* Afbeelding van het footerlogo */
+.footer-brand img {
+    width: 90px;
+    height: auto;
+}
+
+/* Koppen en links in de footer */
+.footer-nav h2 {
+    margin: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Lijsten in de footer */
+.site-footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-nav li,
+.site-footer li {
+    margin-bottom: 7px;
+}
+
+/* Vormgeving van de footerlinks */
+.site-footer a {
+    color: #ffffff;
+    font-size: 0.65rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    text-transform: none;
+}
+
+/* Belangrijke tekst in de footer */
+.site-footer li strong {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+/* Nieuwsbrief formulier */
+.footer-form {
+    flex: 1 1 100%;
+    max-width: 23rem;
+    margin-top: 0.5rem;
+}
+
+.footer-form fieldset {
+    border: 0.12rem double #ffffff;
+}
+
+.footer-form legend,
+.footer-form label {
+    font-size: 0.65rem;
+    font-weight: 600;
+}
+
+.footer-form label,
+.footer-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.4rem;
+}
+
+.footer-form input {
+    padding: 0.45rem;
+    font: inherit;
+    font-size: 0.7rem;
+}
+
+.footer-form input[type="submit"] {
+    background-color: #0528F2;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Copyright onderaan de footer */
+.copyright {
+    position: absolute;
+    right: 7%;
+    bottom: 10px;
+    left: 7%;
+    margin: 0;
+    font-size: 0.65rem;
+    text-align: center;
+}
+
+
+/* =================================
+   TABLET EN KLEINERE LAPTOPS
+================================= */
+
+/* Past de indeling aan voor schermen van maximaal 1024px breed */
 @media screen and (max-width: 1024px) {
-	.story {
-		padding: 3rem 5%;
-		gap: 4%;
-	}
 
-	.extra-info {
-		padding-right: 5%;
-		padding-left: 5%;
-		gap: 1rem;
-	}
+    /* Verkleint de binnenruimte van de verhaalsecties */
+    .story {
+        padding: 3rem 5%;
+        gap: 4%;
+    }
+
+    /* Verkleint de ruimte tussen de extra informatiekolommen */
+    .extra-info {
+        padding-right: 5%;
+        padding-left: 5%;
+        gap: 1rem;
+    }
 }
 
-/* Smartphone: maximaal 768px */
+
+/* =================================
+   SMARTPHONES - MAXIMAAL 768PX
+================================= */
+
+/* Past de website aan voor kleinere schermen */
 @media screen and (max-width: 768px) {
-	.site-header {
-		display: block;
-		padding: 0.8rem 5%;
-		text-align: center;
-	}
 
-	.site-header > .brand {
-		margin-bottom: 0.8rem;
-	}
+    /* Verandert de header naar een blokindeling */
+    .site-header {
+        display: block;
+        padding: 0.8rem 5%;
+        text-align: center;
+    }
 
-	.main-nav ul {
-		justify-content: center;
-		gap: 0.5rem 1rem;
-	}
+    /* Voegt ruimte toe onder de merknaam */
+    .site-header > .brand {
+        margin-bottom: 0.8rem;
+    }
 
-	.main-nav a {
-		font-size: 0.62rem;
-	}
+    /* Centreert de navigatielinks en verkleint de tussenruimte */
+    .main-nav ul {
+        justify-content: center;
+        gap: 0.5rem 1rem;
+    }
 
-	.page-heading {
-		padding: 2rem 7%;
-	}
+    /* Verkleint de navigatietekst */
+    .main-nav a {
+        font-size: 0.62rem;
+    }
 
-	.page-heading h1 {
-		font-size: 1rem;
-	}
+    /* Verkleint de binnenruimte van de pagina-introductie */
+    .page-heading {
+        padding: 2rem 7%;
+    }
 
-	.story {
-		display: flex;
-		flex-direction: column;
-		gap: 1.2rem;
-		padding: 2rem 7%;
-		text-align: left;
-	}
+    /* Verkleint de hoofdkop */
+    .page-heading h1 {
+        font-size: 1rem;
+    }
 
-	.story-image,
-	.story-copy {
-		width: 100%;
-		max-width: none;
-		flex-basis: auto;
-	}
+    /* Zet de afbeelding en tekst onder elkaar */
+    .story {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 2rem 7%;
+        text-align: left;
+    }
 
-	.story-image {
-		float: none;
-	}
+    /* Laat de afbeelding en tekst de volledige beschikbare breedte gebruiken */
+    .story-image,
+    .story-copy {
+        width: 100%;
+        max-width: none;
+        flex-basis: auto;
+    }
 
-	.story-image img {
-		max-height: 15rem;
-	}
+    /* Verwijdert de float van de afbeelding op mobiel */
+    .story-image {
+        float: none;
+    }
 
-	.story-copy h2 {
-		font-size: 0.85rem;
-	}
+    /* Beperkt de maximale hoogte van de afbeeldingen */
+    .story-image img {
+        max-height: 15rem;
+    }
 
-	.story-copy p:not(.eyebrow) {
-		font-size: 0.75rem;
-	}
+    /* Verkleint de verhaalonderwerpen */
+    .story-copy h2 {
+        font-size: 0.85rem;
+    }
 
-	.extra-info {
-		display: block;
-		padding: 2rem 7%;
-	}
+    /* Verkleint de verhaaltekst */
+    .story-copy p:not(.eyebrow) {
+        font-size: 0.75rem;
+    }
 
-	.extra-info > section {
-		margin-bottom: 1rem;
-	}
+    /* Verandert de extra informatie naar één kolom */
+    .extra-info {
+        display: block;
+        padding: 2rem 7%;
+    }
 
-	.site-footer {
-		grid-template-columns: 1fr 1fr;
-		padding: 2rem 7% 1rem;
-	}
+    /* Voegt ruimte toe tussen de informatieonderdelen */
+    .extra-info > section {
+        margin-bottom: 1rem;
+    }
 
-	.footer-brand {
-		grid-column: 1 / -1;
-	}
+    /* Past de binnenruimte van de footer aan */
+    .site-footer {
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem 7% 1rem;
+    }
 
-	.cookie-message {
-		right: 0.5rem;
-		bottom: 0.5rem;
-		left: 0.5rem;
-		max-width: none;
-	}
+    /* Laat het footerlogo beide kolommen gebruiken */
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
 
-	/* Verberg de uitgebreide navigatie-labels op kleine schermen. */
-	.desktop-only {
-		display: none;
-	}
+    /* Verplaatst de cookiemelding dichter naar de schermranden */
+    .cookie-message {
+        right: 0.5rem;
+        bottom: 0.5rem;
+        left: 0.5rem;
+        max-width: none;
+    }
+
+    /* Verbergt de uitgebreide navigatielabels op kleine schermen */
+    .desktop-only {
+        display: none;
+    }
 }
 
-/* Extra smalle smartphones */
+
+/* =================================
+   EXTRA SMALLE SMARTPHONES - MAXIMAAL 420PX
+================================= */
+
+/* Past de website aan voor zeer smalle schermen */
 @media screen and (max-width: 420px) {
-	.main-nav ul {
-		gap: 0.45rem 0.7rem;
-	}
 
-	.main-nav a {
-		font-size: 0.55rem;
-	}
+    /* Verkleint de ruimte tussen navigatielinks */
+    .main-nav ul {
+        gap: 0.45rem 0.7rem;
+    }
 
-	.site-footer {
-		grid-template-columns: 1fr;
-	}
+    /* Maakt de navigatietekst nog kleiner */
+    .main-nav a {
+        font-size: 0.55rem;
+    }
 
-	.footer-brand,
-	.copyright {
-		grid-column: 1;
-	}
+    /* Past de footer aan voor smalle schermen */
+    .site-footer {
+        grid-template-columns: 1fr;
+    }
 
-	.cookie-message {
-		display: block;
-	}
+    /* Laat het footerlogo en de copyrighttekst één kolom gebruiken */
+    .footer-brand,
+    .copyright {
+        grid-column: 1;
+    }
 
-	.cookie-message a {
-		display: inline-block;
-		margin-top: 0.3rem;
-	}
+    /* Zet de inhoud van de cookiemelding onder elkaar */
+    .cookie-message {
+        display: block;
+    }
+
+    /* Plaatst de cookielink op een nieuwe regel */
+    .cookie-message a {
+        display: inline-block;
+        margin-top: 0.3rem;
+    }
 }
+
+

@@ -1,46 +1,63 @@
+/* Google Fonts importeren: Montserrat voor gewone tekst en Space Mono voor koppen */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap');
 
-/* Algemene instellingen */
+
+/* =================================
+   ALGEMENE INSTELLINGEN
+================================= */
+
+/* Zorgt ervoor dat padding en borders worden meegerekend in de totale breedte en hoogte */
 * {
     box-sizing: border-box;
 }
 
+/* Zorgt ervoor dat scrollen naar onderdelen van de pagina soepel verloopt */
 html {
     scroll-behavior: smooth;
 }
 
+/* Algemene instellingen voor de hele website */
 body {
-    margin: 0;
-    background-color: #eeeeee;
-    color: #171717;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    word-spacing: 0.08em;
+    margin: 0; /* Verwijdert de standaard buitenmarge van de browser */
+    background-color: #eeeeee; /* Achtergrondkleur van de website */
+    color: #171717; /* Standaard tekstkleur */
+    font-family: 'Montserrat', sans-serif; /* Standaard lettertype */
+    line-height: 1.6; /* Ruimte tussen tekstregels */
+    word-spacing: 0.08em; /* Extra ruimte tussen woorden */
 }
 
+
+/* =================================
+   HEADER
+================================= */
+
+/* Vormgeving en uitlijning van de bovenste navigatiebalk */
 .site-header {
-    position: relative;
-    min-height: 64px;
-    padding: 12px 5%;
-    background-color: #a17d56;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative; /* Maakt de header het referentiepunt voor absoluut gepositioneerde elementen */
+    min-height: 64px; /* Minimale hoogte van de header */
+    padding: 12px 5%; /* Binnenruimte boven/onder en links/rechts */
+    background-color: #8F6F49; /* Achtergrondkleur van de header */
+    display: flex; /* Zet de inhoud naast elkaar met Flexbox */
+    align-items: center; /* Centreert de inhoud verticaal */
+    justify-content: center; /* Centreert de navigatie horizontaal */
 }
 
+/* Plaatst het logo links in de header */
 .logo {
-    position: absolute;
-    left: 8%;
-    top: 10px;
-    display: block;
+    position: absolute; /* Haalt het logo uit de normale flex-indeling */
+    left: 8%; /* Afstand vanaf de linkerkant */
+    top: 10px; /* Afstand vanaf de bovenkant */
+    display: block; /* Zorgt ervoor dat de link als blokelement wordt weergegeven */
 }
 
+/* Bepaalt de afmetingen en weergave van het logo */
 .logo img {
-    width: 42px;
-    height: 42px;
-    object-fit: contain;
+    width: 42px; /* Breedte van het logo */
+    height: 42px; /* Hoogte van het logo */
+    object-fit: contain; /* Zorgt dat het volledige logo zichtbaar blijft zonder vervorming */
 }
 
+/* Verwijdert standaard marges, padding en opsommingstekens uit navigatielijsten en footer-lijsten */
 .main-nav ul,
 .site-footer ul {
     margin: 0;
@@ -48,182 +65,234 @@ body {
     list-style: none;
 }
 
+/* Zet de navigatielinks naast elkaar */
 .main-nav ul {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 34px;
+    justify-content: center; /* Centreert de links */
+    flex-wrap: wrap; /* Laat links naar een volgende regel gaan als er te weinig ruimte is */
+    gap: 34px; /* Ruimte tussen de navigatielinks */
 }
 
+/* Algemene vormgeving van links in de header en footer */
 .main-nav a,
 .site-footer a {
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 0.72rem;
-    font-weight: 700;
+    color: #ffffff; /* Witte tekstkleur */
+    text-decoration: none; /* Verwijdert de standaard onderstreping */
+    text-transform: uppercase; /* Zet tekst om naar hoofdletters */
+    letter-spacing: 0.08em; /* Ruimte tussen letters */
+    font-size: 0.72rem; /* Tekstgrootte */
+    font-weight: 700; /* Dikke tekst */
 }
 
+/* Verandert de kleur en onderstreping wanneer je met de muis over een link gaat */
 a:hover {
     color: #ffe08a;
     text-decoration: underline;
 }
 
+/* Verandert de kleur zolang je op een link klikt */
 a:active {
     color: #ffcf00;
 }
 
+/* Bepaalt de kleur van links die eerder zijn bezocht */
 a:visited {
     color: #f5e7d4;
 }
 
+
+/* =================================
+   ALGEMENE INDELING VAN DE PAGINA
+================================= */
+
+/* Beperkt de breedte van directe secties binnen main en centreert deze */
 main > section {
-    width: min(1100px, 90%);
-    margin: 0 auto;
+    width: min(1100px, 90%); /* Maximaal 1100px breed of 90% van het scherm */
+    margin: 0 auto; /* Centreert de sectie horizontaal */
 }
 
+/* De grote afbeelding en tekst bovenaan de homepage */
 .hero {
-    position: relative;
-    min-height: 360px;
-    overflow: hidden;
+    position: relative; /* Maakt dit het referentiepunt voor de tekst over de afbeelding */
+    min-height: 360px; /* Minimale hoogte van het hero-gedeelte */
+    overflow: hidden; /* Verbergt inhoud die buiten de sectie valt */
 }
 
+/* Zorgt dat de hero-afbeelding de volledige breedte vult */
 .hero > img {
-    display: block;
-    width: 100%;
-    height: 360px;
-    object-fit: cover;
+    display: block; /* Verwijdert ongewenste ruimte onder de afbeelding */
+    width: 100%; /* Gebruikt de volledige breedte */
+    height: 360px; /* Stelt de hoogte in */
+    object-fit: cover; /* Vult het afbeeldingsvak zonder de afbeelding te vervormen */
 }
 
+/* Plaatst de tekst boven op de hero-afbeelding */
 .hero-copy {
-    position: absolute;
-    top: 12%;
-    right: 8%;
-    max-width: 390px;
-    text-align: right;
+    position: absolute; /* Maakt het mogelijk om de tekst boven op de afbeelding te plaatsen */
+    top: 12%; /* Afstand vanaf de bovenkant */
+    right: 8%; /* Afstand vanaf de rechterkant */
+    max-width: 390px; /* Maximale breedte van het tekstblok */
+    text-align: right; /* Lijnt de tekst rechts uit */
 }
 
+
+/* =================================
+   KOPPEN EN TEKST
+================================= */
+
+/* Algemene vormgeving van H1- en H2-koppen */
 h1,
 h2 {
-    margin: 0 0 18px;
-    font-family: 'Space Mono', monospace;
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -0.04em;
-    text-indent: 0.2em;
+    margin: 0 0 18px; /* Geen bovenmarge en 18px ondermarge */
+    font-family: 'Space Mono', monospace; /* Lettertype voor koppen */
+    font-weight: 700; /* Dikke tekst */
+    line-height: 1.05; /* Kleine afstand tussen de regels */
+    letter-spacing: -0.04em; /* Maakt de letters iets compacter */
+    text-indent: 0.2em; /* Laat de eerste regel iets inspringen */
 }
 
+/* Vormgeving van de grootste koppen */
 h1 {
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    text-transform: uppercase;
+    font-size: clamp(2rem, 4vw, 3.5rem); /* Lettergrootte past zich aan het scherm aan */
+    text-transform: uppercase; /* Zet de tekst om naar hoofdletters */
 }
 
+/* Vormgeving van de kleinere koppen */
 h2 {
-    font-size: clamp(1.35rem, 2.5vw, 2rem);
+    font-size: clamp(1.35rem, 2.5vw, 2rem); /* Responsieve lettergrootte */
 }
 
+/* Algemene vormgeving van alinea's */
 p {
-    margin: 0 0 22px;
-    line-height: 1.65;
-    text-indent: 0.5em;
+    margin: 0 0 22px; /* Ruimte onder iedere alinea */
+    line-height: 1.65; /* Ruimte tussen tekstregels */
+    text-indent: 0.5em; /* Laat de eerste regel iets inspringen */
 }
 
+
+/* =================================
+   KNOPPEN
+================================= */
+
+/* Vormgeving van algemene knoppen */
 .button {
-    display: inline-block;
-    padding: 9px 16px;
-    border: 2px double #062eea;
-    border-color: #062eea;
+    display: inline-block; /* Maakt het mogelijk om padding en afmetingen toe te passen */
+    padding: 9px 16px; /* Binnenruimte in de knop */
+    border: 2px double #0528F2; /* Dubbele blauwe rand */
+    border-color: #0528F2;
     border-style: double;
     border-width: 2px;
-    border-radius: 4px;
-    background-color: #062eea;
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    font-size: 0.7rem;
-    font-weight: 800;
+    border-radius: 4px; /* Licht afgeronde hoeken */
+    background-color: #0528F2; /* Blauwe achtergrond */
+    color: #ffffff; /* Witte tekst */
+    text-decoration: none; /* Geen onderstreping */
+    text-transform: uppercase; /* Hoofdletters */
+    letter-spacing: 0.04em; /* Ruimte tussen letters */
+    font-size: 0.7rem; /* Tekstgrootte */
+    font-weight: 800; /* Extra dikke tekst */
 }
 
+/* Verandert de knop wanneer je er met de muis overheen gaat */
 .button:hover {
-    background-color: #ffffff;
-    color: #062eea;
+    background-color: #ffffff; /* Witte achtergrond */
+    color: #0528F2; /* Blauwe tekst */
 }
 
+
+/* =================================
+   INHOUDSRIJEN
+================================= */
+
+/* Zet een afbeelding en een tekstblok naast elkaar */
 .content-row {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 7%;
-    padding: 55px 5%;
+    align-items: center; /* Centreert de onderdelen verticaal */
+    justify-content: space-between; /* Verdeelt de beschikbare ruimte */
+    gap: 7%; /* Ruimte tussen afbeelding en tekst */
+    padding: 55px 5%; /* Binnenruimte rondom de inhoud */
 }
 
+/* Bepaalt de grootte van de afbeelding binnen een inhoudsrij */
 .content-row figure {
-    flex: 1 1 55%;
-    min-width: 0;
-    margin: 0;
+    flex: 1 1 55%; /* Basisbreedte van 55%, mag groeien en krimpen */
+    min-width: 0; /* Voorkomt dat de afbeelding de rij te breed maakt */
+    margin: 0; /* Verwijdert de standaardmarge van figure */
 }
 
+/* Vormgeving van afbeeldingen binnen een inhoudsrij */
 .content-row figure img {
     display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 3px;
+    width: 100%; /* Afbeelding vult de volledige breedte */
+    aspect-ratio: 16 / 9; /* Houdt de verhouding 16:9 aan */
+    object-fit: cover; /* Vult het afbeeldingsvak zonder vervorming */
+    border-radius: 3px; /* Licht afgeronde hoeken */
 }
 
+/* Vormgeving van het bijschrift onder afbeeldingen */
 figcaption {
-    margin-top: 7px;
-    color: #666666;
-    font-size: 0.72rem;
-    font-style: italic;
+    margin-top: 7px; /* Ruimte boven het bijschrift */
+    color: #666666; /* Grijze tekstkleur */
+    font-size: 0.72rem; /* Kleine tekst */
+    font-style: italic; /* Schuingedrukte tekst */
 }
 
+/* Bepaalt de breedte van het tekstgedeelte naast de afbeelding */
 .copy {
     flex: 1 1 38%;
 }
 
+/* Maakt de eerste letter van alinea's in het tekstgedeelte groter en dikker */
 .copy p::first-letter {
     font-size: 1.25em;
     font-weight: 700;
 }
 
+
+/* =================================
+   FOOTER
+================================= */
+
+/* Vormgeving en indeling van de onderste navigatiebalk */
 .site-footer {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 45px 7% 65px;
-    background-color: #a17d56;
-    color: #ffffff;
+    position: relative; /* Referentiepunt voor de copyrighttekst */
+    display: flex; /* Zet de footer-onderdelen naast elkaar */
+    align-items: flex-start; /* Lijnt de onderdelen bovenaan uit */
+    justify-content: space-between; /* Verdeelt de onderdelen over de beschikbare breedte */
+    flex-wrap: wrap; /* Laat onderdelen naar een volgende regel gaan als dat nodig is */
+    gap: 30px; /* Ruimte tussen de footer-onderdelen */
+    padding: 45px 7% 65px; /* Binnenruimte boven, links/rechts en onder */
+    background-color: #8F6F49; /* Achtergrondkleur van de footer */
+    color: #ffffff; /* Standaard tekstkleur */
 }
 
+/* Bepaalt de breedte van het logo in de footer */
 .footer-brand img {
     width: 90px;
-    height: auto;
+    height: auto; /* Behoudt de oorspronkelijke verhouding */
 }
 
+/* Geeft ruimte onder ieder lijstonderdeel in de footer */
 .site-footer li {
     margin-bottom: 7px;
 }
 
+/* Vormgeving van de titels boven de footer-linklijsten */
 .site-footer li strong {
     display: inline-block;
-    margin-bottom: 8px;
+    margin-bottom: 8px; /* Ruimte onder de titel */
     font-size: 0.9rem;
 }
 
+/* Past de footer-links aan ten opzichte van de algemene navigatielinks */
 .site-footer a {
     font-size: 0.65rem;
-    text-transform: none;
+    text-transform: none; /* Behoudt normale hoofd- en kleine letters */
     letter-spacing: 0.02em;
 }
 
+/* Plaatst de copyrighttekst onderaan en centreert deze */
 .copyright {
-    position: absolute;
+    position: absolute; /* Plaatst de tekst los van de normale flex-indeling */
     right: 7%;
     bottom: 10px;
     left: 7%;
@@ -232,74 +301,104 @@ figcaption {
     font-size: 0.65rem;
 }
 
+
+/* =================================
+   COOKIE MELDING
+================================= */
+
+/* Plaatst de cookiemelding vast rechtsonder op het scherm */
 .cookie-message {
-    position: fixed;
-    z-index: 9999;
+    position: fixed; /* Blijft op dezelfde plek tijdens het scrollen */
+    z-index: 9999; /* Zorgt dat de melding boven andere elementen staat */
     right: 16px;
     bottom: 16px;
-    max-width: 290px;
-    padding: 14px;
+    max-width: 290px; /* Maximale breedte van de melding */
+    padding: 14px; /* Binnenruimte */
     border: 1px solid #333333;
     background-color: #ffffff;
-    box-shadow: 0 2px 12px #00000033;
+    box-shadow: 0 2px 12px #00000033; /* Schaduw rondom de melding */
     font-size: 0.75rem;
 }
 
+/* Verkleint de ruimte onder alinea's in de cookiemelding */
 .cookie-message p {
     margin-bottom: 6px;
 }
 
+/* Geeft links in de cookiemelding een blauwe kleur */
 .cookie-message a {
-    color: #062eea;
+    color: #0528F2;
 }
 
-/* Tabelstijl voor bijvoorbeeld een overzichtspagina */
+
+/* =================================
+   TABELLEN
+================================= */
+
+/* Laat de tabel de volledige beschikbare breedte gebruiken */
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Voegt aangrenzende tabelranden samen */
 }
 
+/* Algemene vormgeving van tabelkoppen en tabelcellen */
 th,
 td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #777777;
+    padding: 10px; /* Ruimte rondom de celinhoud */
+    text-align: left; /* Lijnt tekst links uit */
+    border: 1px solid #777777; /* Dunne grijze rand */
 }
 
+/* Geeft even rijen in de tabel een lichtblauwe achtergrond */
 tbody tr:nth-child(even) {
     background-color: #cff;
 }
 
+/* Geeft oneven rijen in de tabel een witte achtergrond */
 tbody tr:nth-child(odd) {
     background-color: #fff;
 }
 
-/* Een float-voorbeeld voor afbeeldingen in tekstpagina's */
+
+/* =================================
+   AFBEELDINGEN IN TEKSTPAGINA'S
+================================= */
+
+/* Laat een afbeelding links naast de tekst zweven */
 .article-image {
     float: left;
-    width: 40%;
-    margin: 0 22px 14px 0;
+    width: 40%; /* Afbeelding neemt 40% van de beschikbare breedte in */
+    margin: 0 22px 14px 0; /* Ruimte rechts en onder de afbeelding */
 }
 
-/* Selecteert directe links binnen navigatie-items */
+
+/* =================================
+   NAVIGATIELINKS
+================================= */
+
+/* Selecteert links die direct binnen een lijstonderdeel van een navigatie staan */
 nav > ul > li > a {
-    transition: color 0.2s ease;
+    transition: color 0.2s ease; /* Laat kleurveranderingen geleidelijk verlopen */
 }
+
 
 /* =================================
    CONTACT PAGINA
 ================================= */
 
+/* Algemene achtergrond van het contactgedeelte */
 .contact-main {
     background-color: #ffffff;
 }
 
+/* Introductiegedeelte bovenaan de contactpagina */
 .contact-intro {
-    min-height: 310px;
-    padding: 65px 6%;
+    min-height: 310px; /* Minimale hoogte */
+    padding: 65px 6%; /* Binnenruimte */
     background-color: #ffffff;
 }
 
+/* Afwijkende vormgeving van de hoofdkop op de contactpagina */
 .contact-intro h1 {
     margin-bottom: 30px;
     font-family: 'Montserrat', sans-serif;
@@ -307,25 +406,29 @@ nav > ul > li > a {
     font-weight: 500;
 }
 
+/* Beperkt de breedte en bepaalt de tekstgrootte van de introductie */
 .contact-intro p {
     max-width: 620px;
     font-size: 0.85rem;
     line-height: 1.7;
 }
 
+/* Achtergrond en binnenruimte van het contactformulier */
 .contact-form-section {
     padding: 55px 3%;
     background-color: #807809;
 }
 
+/* Verdeelt het formulier in twee kolommen */
 .contact-form-section fieldset {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 25px;
+    grid-template-columns: 1fr 1.5fr; /* Tweede kolom is anderhalf keer zo breed */
+    gap: 25px; /* Ruimte tussen de kolommen */
     padding: 0;
     border: none;
 }
 
+/* Verbergt de legend visueel, maar houdt deze beschikbaar voor hulptechnologie */
 .contact-form-section legend {
     position: absolute;
     width: 1px;
@@ -334,6 +437,7 @@ nav > ul > li > a {
     clip: rect(0, 0, 0, 0);
 }
 
+/* Zet de contactvelden onder elkaar */
 .contact-fields {
     display: flex;
     flex-direction: column;
@@ -341,10 +445,12 @@ nav > ul > li > a {
     gap: 12px;
 }
 
+/* Verwijdert de standaard ondermarge van alinea's in het formulier */
 .contact-fields p {
     margin: 0;
 }
 
+/* Vormgeving van de labels bij de invoervelden */
 .contact-fields label,
 .message-field label {
     display: block;
@@ -353,6 +459,7 @@ nav > ul > li > a {
     font-size: 0.8rem;
 }
 
+/* Vormgeving van invoervelden en keuzelijsten */
 .contact-fields input,
 .contact-fields select {
     width: 100%;
@@ -361,47 +468,51 @@ nav > ul > li > a {
     border: 1px solid #aaaaaa;
     border-radius: 5px;
     background-color: #eeeeee;
-    font-family: inherit;
+    font-family: inherit; /* Gebruikt hetzelfde lettertype als het omliggende element */
     font-size: 0.8rem;
 }
 
+/* Zet de berichtvelden onder elkaar en centreert ze verticaal */
 .message-field {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+/* Vormgeving van het grote tekstvak voor het bericht */
 .message-field textarea {
     width: 100%;
     min-height: 170px;
     padding: 12px;
-    border: 2px solid #062eea;
+    border: 2px solid #0528F2;
     border-radius: 5px;
     background-color: #eeeeee;
     font-family: inherit;
     font-size: 0.85rem;
-    resize: vertical;
+    resize: vertical; /* Gebruiker kan het tekstvak alleen hoger of lager maken */
 }
 
+/* Vormgeving van de verzendknop */
 .message-field input[type="submit"] {
     width: 100%;
     margin-top: 15px;
     padding: 12px;
-    border: 2px double #062eea;
-    border-color: #062eea;
+    border: 2px double #0528F2;
+    border-color: #0528F2;
     border-style: double;
     border-width: 2px;
     border-radius: 5px;
-    background-color: #062eea;
+    background-color: #0528F2;
     color: #ffffff;
     font-family: inherit;
     font-weight: bold;
-    cursor: pointer;
+    cursor: pointer; /* Verandert de muisaanwijzer in een handje */
 }
 
+/* Verandert de verzendknop wanneer je er met de muis overheen gaat */
 .message-field input[type="submit"]:hover {
     background-color: #ffffff;
-    color: #062eea;
+    color: #0528F2;
 }
 
 
@@ -409,11 +520,13 @@ nav > ul > li > a {
    GENRES PAGINA
 ================================= */
 
+/* Algemene indeling van de genrespagina */
 .genres-main {
     padding: 35px 3% 50px;
     background-color: #ffffff;
 }
 
+/* Centreert en vergroot de hoofdkop van de genrespagina */
 .genres-main > h1 {
     margin: 0 0 45px;
     text-align: center;
@@ -421,6 +534,7 @@ nav > ul > li > a {
     font-weight: 800;
 }
 
+/* Zet de omschrijving en afbeelding van een genre naast elkaar */
 .genre-row {
     display: flex;
     align-items: center;
@@ -430,16 +544,19 @@ nav > ul > li > a {
     padding: 0 7%;
 }
 
+/* Wisselt de volgorde van afbeelding en tekst om */
 .genre-row.reverse {
     flex-direction: row-reverse;
 }
 
+/* Bepaalt de breedte en binnenruimte van de genretekst */
 .genre-description {
     flex: 1 1 35%;
     min-width: 0;
     padding: 15px;
 }
 
+/* Vormgeving van de kop binnen een genreomschrijving */
 .genre-description h2 {
     margin-bottom: 20px;
     text-align: center;
@@ -448,6 +565,7 @@ nav > ul > li > a {
     font-weight: 400;
 }
 
+/* Vormgeving van de tekst binnen een genreomschrijving */
 .genre-description p {
     font-family: Georgia, serif;
     font-size: 0.78rem;
@@ -455,12 +573,14 @@ nav > ul > li > a {
     text-indent: 0.5em;
 }
 
+/* Bepaalt de breedte van de genreafbeelding */
 .genre-image {
     flex: 1 1 60%;
     min-width: 0;
     margin: 0;
 }
 
+/* Zorgt dat genreafbeeldingen de volledige beschikbare breedte gebruiken */
 .genre-image img {
     display: block;
     width: 100%;
@@ -469,6 +589,7 @@ nav > ul > li > a {
     border-radius: 3px;
 }
 
+/* Vormgeving van het bijschrift onder genreafbeeldingen */
 .genre-image figcaption {
     margin-top: 5px;
     color: #777777;
@@ -483,36 +604,41 @@ nav > ul > li > a {
 
 @media screen and (max-width: 768px) {
 
-    /* Contactpagina */
-
+    /* Contactpagina: minder ruimte rondom de introductie */
     .contact-intro {
         min-height: auto;
         padding: 25px 5% 35px;
     }
 
+    /* Kleinere kop op de contactpagina */
     .contact-intro h1 {
         margin-bottom: 18px;
         font-size: 2rem;
     }
 
+    /* Kleinere tekst op de contactpagina */
     .contact-intro p {
         font-size: 0.7rem;
     }
 
+    /* Minder binnenruimte rondom het contactformulier */
     .contact-form-section {
         padding: 25px 5%;
     }
 
+    /* Zet de formulierkolommen op mobiel onder elkaar */
     .contact-form-section fieldset {
         display: flex;
         flex-direction: column;
         gap: 15px;
     }
 
+    /* Verkleint de ruimte tussen de contactvelden */
     .contact-fields {
         gap: 8px;
     }
 
+    /* Maakt de invoervelden compacter */
     .contact-fields input,
     .contact-fields select {
         min-height: 30px;
@@ -520,17 +646,20 @@ nav > ul > li > a {
         font-size: 0.7rem;
     }
 
+    /* Past de labels aan voor mobiel */
     .contact-fields label,
     .message-field label {
         color: #171717;
         font-size: 0.7rem;
     }
 
+    /* Maakt het berichtveld kleiner */
     .message-field textarea {
         min-height: 120px;
         font-size: 0.7rem;
     }
 
+    /* Verkleint de verzendknop */
     .message-field input[type="submit"] {
         margin-top: 10px;
         padding: 9px;
@@ -538,12 +667,12 @@ nav > ul > li > a {
     }
 
 
-    /* Genrespagina */
-
+    /* Genrespagina: minder ruimte rondom de inhoud */
     .genres-main {
         padding: 25px 5%;
     }
 
+    /* Kleinere en anders vormgegeven hoofdkop */
     .genres-main > h1 {
         margin-bottom: 20px;
         font-size: 1.5rem;
@@ -551,6 +680,7 @@ nav > ul > li > a {
         font-weight: 400;
     }
 
+    /* Zet genreafbeeldingen en tekst onder elkaar */
     .genre-row,
     .genre-row.reverse {
         flex-direction: column;
@@ -559,95 +689,125 @@ nav > ul > li > a {
         padding: 0;
     }
 
+    /* Plaatst de genreomschrijving onder de afbeelding */
     .genre-description {
         order: 2;
         width: 100%;
         padding: 8px 5px;
     }
 
+    /* Plaatst de genreafbeelding boven de tekst */
     .genre-image {
         order: 1;
         width: 100%;
     }
 
+    /* Verkleint de koppen van de genreomschrijvingen */
     .genre-description h2 {
         margin-bottom: 8px;
         font-size: 1rem;
     }
 
+    /* Verkleint de tekst van de genreomschrijvingen */
     .genre-description p {
         font-size: 0.65rem;
         line-height: 1.5;
     }
 
+    /* Behoudt de beeldverhouding van genreafbeeldingen */
     .genre-image img {
         aspect-ratio: 16 / 9;
     }
 
 }
 
-/* Desktop: viewport breder dan 768px */
+
+/* =================================
+   DESKTOP WEERGAVE
+================================= */
+
+/* Deze instellingen gelden alleen voor schermen breder dan 768px */
 @media screen and (min-width: 769px) {
+
+    /* Zet omgekeerde inhoudsrijen op desktop in een normale rij */
     .content-row.reverse {
         flex-direction: row;
     }
 
+    /* Zet gewone inhoudsrijen ook horizontaal */
     .content-row:not(.reverse) {
         flex-direction: row;
     }
 
+    /* Past de hoogte van de hero-afbeelding aan de schermbreedte aan */
     .hero > img {
         height: min(42vw, 520px);
     }
 }
 
-/* Mobiel en kleine tablets */
+
+/* =================================
+   MOBIEL EN KLEINE TABLETS
+================================= */
+
 @media screen and (max-width: 768px) {
+
+    /* Maakt de header hoger en geeft ruimte voor het logo */
     .site-header {
         min-height: 74px;
         padding: 12px 14px 12px 62px;
     }
 
+    /* Verplaatst het logo naar links op mobiele schermen */
     .logo {
         left: 12px;
         top: 15px;
     }
 
+    /* Verkleint het logo op mobiel */
     .logo img {
         width: 38px;
         height: 38px;
     }
 
+    /* Verkleint de ruimte tussen navigatielinks */
     .main-nav ul {
         gap: 7px 14px;
     }
 
+    /* Verkleint de navigatietekst */
     .main-nav a {
         font-size: 0.55rem;
     }
 
+    /* Laat hoofdsecties de volledige schermbreedte gebruiken */
     main > section {
         width: 100%;
     }
 
+    /* Verkleint de minimale hoogte van het hero-gedeelte */
     .hero {
         min-height: 230px;
     }
 
+    /* Verkleint de hero-afbeelding */
     .hero > img {
         height: 230px;
     }
 
+    /* Past de positie en breedte van de hero-tekst aan */
     .hero-copy {
         top: 12%;
         right: 5%;
         max-width: 230px;
     }
 
+    /* Verkleint de H1-koppen */
     h1 {
         font-size: 1.55rem;
     }
 
+    /* Zet inhoudsrijen op mobiel onder elkaar */
     .content-row,
     .content-row.reverse {
         flex-direction: column;
@@ -656,53 +816,65 @@ nav > ul > li > a {
         padding: 28px 7%;
     }
 
+    /* Laat afbeeldingen en tekst de volledige breedte gebruiken */
     .content-row figure,
     .copy {
         width: 100%;
         flex-basis: auto;
     }
 
+    /* Zet de tekst onder de afbeelding bij omgekeerde inhoudsrijen */
     .content-row.reverse .copy {
         order: 2;
     }
 
+    /* Zet de afbeelding boven de tekst bij omgekeerde inhoudsrijen */
     .content-row.reverse figure {
         order: 1;
     }
 
+    /* Verkleint H2-koppen binnen het tekstgedeelte */
     .copy h2 {
         font-size: 1.3rem;
     }
 
+    /* Past de alinea's aan voor mobiel */
     .copy p {
         font-size: 0.85rem;
     }
 
+
+    /* Footer: verandert de flex-indeling naar een raster met twee kolommen */
     .site-footer {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /* Twee even brede kolommen */
         gap: 24px;
         padding: 30px 7% 65px;
     }
 
+    /* Laat het footerlogo beide kolommen gebruiken */
     .footer-brand {
         grid-column: 1 / -1;
     }
 
+    /* Verkleint het footerlogo op mobiel */
     .footer-brand img {
         width: 65px;
     }
 
+    /* Verkleint de copyrighttekst op mobiel */
     .copyright {
         font-size: 0.55rem;
     }
 
+    /* Verplaatst de cookiemelding dichter naar de rand en maakt deze smaller */
     .cookie-message {
         right: 8px;
         bottom: 8px;
         max-width: 230px;
     }
 
+    /* Zet afbeeldingen die normaal links zweven op mobiel boven de tekst */
     .article-image {
         float: none;
         width: 100%;
@@ -710,29 +882,38 @@ nav > ul > li > a {
     }
 }
 
-/* Formulier */
+
+/* =================================
+   FORMULIER - ALGEMENE INSTELLINGEN
+================================= */
+
+/* Zorgt dat het contactgedeelte voldoende hoogte heeft en ruimte boven en onder */
 .contact-main {
-    min-height: 65vh;
+    min-height: 65vh; /* Minimaal 65% van de hoogte van het zichtbare scherm */
     padding-top: 35px;
     padding-bottom: 35px;
 }
 
+/* Algemene binnenruimte en rand voor fieldsets */
 fieldset {
     padding: 22px;
-    border: 2px double #a17d56;
+    border: 2px double #8F6F49;
 }
 
+/* Vormgeving van de titel van een fieldset */
 legend {
     padding: 0 8px;
     font-weight: 700;
 }
 
+/* Algemene vormgeving van formulierlabels */
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: 700;
 }
 
+/* Algemene vormgeving van invoervelden en tekstvakken, behalve verzendknoppen */
 input:not([type="submit"]),
 textarea {
     width: 100%;
@@ -741,6 +922,126 @@ textarea {
     font: inherit;
 }
 
+/* Maakt het mogelijk om tekstvakken alleen verticaal groter of kleiner te maken */
 textarea {
     resize: vertical;
+}
+
+
+
+/* =========================================
+   Footer - Algemene instellingen
+========================================= */
+
+/* Dezelfde footer-indeling op alle pagina's */
+.site-footer {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 45px 7% 65px;
+    background-color: #8F6F49;
+    color: #ffffff;
+}
+
+/* Logo in de footer */
+.footer-logo .brand-symbol {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.1rem;
+}
+
+.footer-logo .brand-name {
+    display: block;
+    font-size: 1.6rem;
+}
+
+/* Afbeelding van het footerlogo */
+.footer-brand img {
+    width: 90px;
+    height: auto;
+}
+
+/* Koppen en links in de footer */
+.footer-nav h2 {
+    margin: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Lijsten in de footer */
+.site-footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-nav li,
+.site-footer li {
+    margin-bottom: 7px;
+}
+
+/* Vormgeving van de footerlinks */
+.site-footer a {
+    color: #ffffff;
+    font-size: 0.65rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    text-transform: none;
+}
+
+/* Belangrijke tekst in de footer */
+.site-footer li strong {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+/* Nieuwsbrief formulier */
+.footer-form {
+    flex: 1 1 100%;
+    max-width: 23rem;
+    margin-top: 0.5rem;
+}
+
+.footer-form fieldset {
+    border: 0.12rem double #ffffff;
+}
+
+.footer-form legend,
+.footer-form label {
+    font-size: 0.65rem;
+    font-weight: 600;
+}
+
+.footer-form label,
+.footer-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.4rem;
+}
+
+.footer-form input {
+    padding: 0.45rem;
+    font: inherit;
+    font-size: 0.7rem;
+}
+
+.footer-form input[type="submit"] {
+    background-color: #001dcc;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Copyright onderaan de footer */
+.copyright {
+    position: absolute;
+    right: 7%;
+    bottom: 10px;
+    left: 7%;
+    margin: 0;
+    font-size: 0.65rem;
+    text-align: center;
 }
