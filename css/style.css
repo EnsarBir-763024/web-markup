@@ -179,11 +179,6 @@ p {
     font-weight: 800; /* Extra dikke tekst */
 }
 
-/* Verandert de knop wanneer je er met de muis overheen gaat */
-.button:hover {
-    background-color: #ffffff; /* Witte achtergrond */
-    color: #0528F2; /* Blauwe tekst */
-}
 
 
 /* =================================
@@ -299,7 +294,8 @@ figcaption {
     z-index: 9999; /* Zorgt dat de melding boven andere elementen staat */
     right: 16px;
     bottom: 16px;
-    max-width: 290px; /* Maximale breedte van de melding */
+    max-width: 290px;
+    max-height: 90px;
     padding: 14px; /* Binnenruimte */
     border: 1px solid #333333;
     background-color: #ffffff;
@@ -496,13 +492,6 @@ nav > ul > li > a {
     cursor: pointer; /* Verandert de muisaanwijzer in een handje */
 }
 
-/* Verandert de verzendknop wanneer je er met de muis overheen gaat */
-.message-field input[type="submit"]:hover {
-    background-color: #ffffff;
-    color: #0528F2;
-}
-
-
 /* =================================
    GENRES PAGINA
 ================================= */
@@ -582,6 +571,38 @@ nav > ul > li > a {
     color: #777777;
     font-size: 0.65rem;
     font-style: italic;
+}
+
+/* Cookie information notice */
+.cookie-message {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 290px;
+    max-height: 90px;
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: #222222;
+    color: #ffffff;
+    text-align: center;
+    border-top: 0.15rem double #ffffff;
+    font-size: 0.74rem;
+    z-index: 99999;
+}
+
+.cookie-message p {
+    margin: 0;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* Cookie notice on smaller screens */
+@media screen and (max-width: 768px) {
+    .cookie-message {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
 }
 
 /* =================================

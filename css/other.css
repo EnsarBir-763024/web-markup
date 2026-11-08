@@ -28,18 +28,6 @@ a {
     text-decoration: none;
 }
 
-a:visited {
-    color: inherit;
-}
-
-a:hover {
-    color: #00d59a;
-}
-
-a:active {
-    color: #f2c94c;
-}
-
 /* Maakt links zichtbaar wanneer je met het toetsenbord navigeert */
 a:focus-visible {
     outline: 3px solid #00d59a;
@@ -381,25 +369,6 @@ article-numbering {
     text-transform: uppercase;
 }
 
-/* Houdt de tekst wit wanneer de link bezocht is */
-.article-action:visited {
-    color: #ffffff;
-}
-
-/* Verandert de knop wanneer je eroverheen beweegt */
-.article-action:hover {
-    border-color: #00d59a;
-    background-color: #00d59a;
-    color: #111111;
-}
-
-/* Verandert de knop wanneer je erop klikt */
-.article-action:active {
-    background-color: #92734e;
-    color: #ffffff;
-}
-
-
 /* =========================================
    Footer
 ========================================= */
@@ -532,33 +501,28 @@ article-numbering {
    Cookie melding
 ========================================= */
 
-/* Houdt de cookie melding vast op het scherm */
+/* Cookie information notice */
 .cookie-message {
     position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    max-width: 32rem;
-    padding: 0.8rem 1rem;
-    border: 0.15rem double #ffffff;
-    background-color: #171717;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 290px;
+    max-height: 90px;
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: #222222;
     color: #ffffff;
-    box-shadow: 0 0.3rem 1rem rgb(0 0 0 / 25%);
-    font-size: 0.75rem;
+    text-align: center;
+    border-top: 0.15rem double #ffffff;
+    font-size: 0.74rem;
+    z-index: 99999;
 }
 
-/* Verwijdert de standaardmarge van de tekst */
 .cookie-message p {
     margin: 0;
-}
-
-/* Link in de cookie melding */
-.cookie-message a {
-    color: #00d7a0;
-    text-decoration: underline;
+    color: #ffffff;
+    line-height: 1.5;
 }
 
 
@@ -758,14 +722,6 @@ article-numbering {
         flex: 1 1 100%;
     }
 
-    /* Verkleint de cookie melding en laat deze over de breedte lopen */
-    .cookie-message {
-        right: 0.5rem;
-        bottom: 0.5rem;
-        left: 0.5rem;
-        max-width: none;
-    }
-
     /* ol first en second numbering*/
     #first {
         margin-top: 4rem;
@@ -937,13 +893,6 @@ article-numbering {
     /* Verkleint de copyrighttekst op mobiel */
     .copyright {
         font-size: 0.55rem;
-    }
-
-    /* Verplaatst de cookiemelding dichter naar de rand en maakt deze smaller */
-    .cookie-message {
-        right: 8px;
-        bottom: 8px;
-        max-width: 230px;
     }
 
     /* Zet afbeeldingen die normaal links zweven op mobiel boven de tekst */

@@ -30,21 +30,6 @@ a {
     text-decoration: none; /* Verwijdert de standaard onderstreping */
 }
 
-/* Behoudt de oorspronkelijke tekstkleur van bezochte links */
-a:visited {
-    color: inherit;
-}
-
-/* Verandert de linkkleur wanneer de muis eroverheen gaat */
-a:hover {
-    color: #00d7a0;
-}
-
-/* Verandert de linkkleur wanneer erop wordt geklikt */
-a:active {
-    color: #ffcf4a;
-}
-
 /* Maakt geselecteerde links en invoervelden duidelijk zichtbaar bij toetsenbordgebruik */
 a:focus-visible,
 input:focus-visible {
@@ -298,20 +283,6 @@ input:focus-visible {
     color: #ffffff;
 }
 
-/* Verandert de achtergrond en rand wanneer de muis over de knop gaat */
-.button-link:hover {
-    border-color: #00d7a0;
-    background-color: #00d7a0;
-    color: #111111;
-}
-
-/* Verandert de achtergrondkleur zolang de knop wordt ingedrukt */
-.button-link:active {
-    background-color: #92734e;
-    color: #ffffff;
-}
-
-
 /* =================================
    EXTRA INFORMATIE SECTIES
 ================================= */
@@ -476,35 +447,29 @@ input:focus-visible {
    COOKIE MELDING
 ================================= */
 
-/* Plaatst de cookiemelding vast rechtsonder op het scherm */
+/* Cookie information notice */
 .cookie-message {
-    position: fixed; /* Blijft op dezelfde plek tijdens het scrollen */
-    right: 1rem;
-    bottom: 1rem;
-    z-index: 9999; /* Zorgt dat de melding boven andere elementen staat */
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    max-width: 32rem;
-    padding: 0.8rem 1rem;
-    border: 0.15rem double #ffffff;
-    background-color: #171717;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 290px;
+    max-height: 90px;
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: #222222;
     color: #ffffff;
-    box-shadow: 0 0.3rem 1rem rgb(0 0 0 / 25%); /* Schaduw rondom de melding */
-    font-size: 0.75rem;
+    text-align: center;
+    border-top: 0.15rem double #ffffff;
+    font-size: 0.74rem;
+    z-index: 99999;
 }
 
-/* Verwijdert de standaardmarge van de tekst in de cookiemelding */
 .cookie-message p {
     margin: 0;
+    color: #ffffff;
+    line-height: 1.5;
 }
-
-/* Vormgeving van de link in de cookiemelding */
-.cookie-message a {
-    color: #00d7a0;
-    text-decoration: underline;
-}
-
 
 /* =================================
    HEADER EN NAVIGATIE - AANVULLENDE STIJLEN
@@ -688,7 +653,6 @@ input:focus-visible {
 
 /* Past de indeling aan voor schermen van maximaal 1024px breed */
 @media screen and (max-width: 1024px) {
-
     /* Verkleint de binnenruimte van de verhaalsecties */
     .story {
         padding: 3rem 5%;
@@ -710,7 +674,6 @@ input:focus-visible {
 
 /* Past de website aan voor kleinere schermen */
 @media screen and (max-width: 768px) {
-
     /* Verandert de header naar een blokindeling */
     .site-header {
         display: block;
@@ -803,14 +766,6 @@ input:focus-visible {
         grid-column: 1 / -1;
     }
 
-    /* Verplaatst de cookiemelding dichter naar de schermranden */
-    .cookie-message {
-        right: 0.5rem;
-        bottom: 0.5rem;
-        left: 0.5rem;
-        max-width: none;
-    }
-
     /* Verbergt de uitgebreide navigatielabels op kleine schermen */
     .desktop-only {
         display: none;
@@ -844,17 +799,6 @@ input:focus-visible {
     .footer-brand,
     .copyright {
         grid-column: 1;
-    }
-
-    /* Zet de inhoud van de cookiemelding onder elkaar */
-    .cookie-message {
-        display: block;
-    }
-
-    /* Plaatst de cookielink op een nieuwe regel */
-    .cookie-message a {
-        display: inline-block;
-        margin-top: 0.3rem;
     }
 }
 
