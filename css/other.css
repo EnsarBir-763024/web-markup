@@ -120,12 +120,14 @@ a:focus-visible {
 }
 
 /* Vormgeving van de navigatielinks */
-.main-nav a {
-    color: #ffffff;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+.main-nav a,
+.site-footer a {
+    color: #ffffff; /* Witte tekstkleur */
+    text-decoration: none; /* Verwijdert de standaard onderstreping */
+    text-transform: uppercase; /* Zet tekst om naar hoofdletters */
+    letter-spacing: 0.08em; /* Ruimte tussen letters */
+    font-size: 0.72rem; /* Tekstgrootte */
+    font-weight: 700; /* Dikke tekst */
 }
 
 

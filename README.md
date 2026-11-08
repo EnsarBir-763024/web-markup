@@ -1,1 +1,7 @@
-lol why u looking here its empty! 😂🤣
+Student name: Ensar Bir
+Student number: 763024
+Student class: HAINF26VT1A
+GitHub Repository: https://github.com/EnsarBir-763024/web-markup
+GitHub Pages URL: https://ensarbir-763024.github.io/web-markup/
+
+in case of student.txt not working for some reason.

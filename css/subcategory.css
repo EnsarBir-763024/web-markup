@@ -87,12 +87,12 @@ input:focus-visible {
 /* Algemene vormgeving van de links in de header en footer */
 .main-nav a,
 .site-footer a {
-    color: #ffffff;
-    text-decoration: none;
+    color: #ffffff; /* Witte tekstkleur */
+    text-decoration: none; /* Verwijdert de standaard onderstreping */
     text-transform: uppercase; /* Zet tekst om naar hoofdletters */
     letter-spacing: 0.08em; /* Ruimte tussen letters */
     font-size: 0.72rem; /* Tekstgrootte */
-    font-weight: 700; /* Maakt de tekst dikgedrukt */
+    font-weight: 700; /* Dikke tekst */
 }
 
 
