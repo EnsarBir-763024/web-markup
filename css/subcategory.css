@@ -19,7 +19,7 @@ body {
     margin: 0; /* Verwijdert de standaard buitenmarge */
     background-color: #f4ecff; /* Achtergrondkleur van de website */
     color: #171717; /* Standaard tekstkleur */
-    font-family: "Montserrat", Arial, sans-serif; /* Standaard lettertype */
+    font-family: "Google Sans Flex", Arial, sans-serif; /* Standaard lettertype */
     line-height: 1.6; /* Ruimte tussen tekstregels */
     word-spacing: 0.08em; /* Extra ruimte tussen woorden */
 }
@@ -266,7 +266,7 @@ input:focus-visible {
 .story-copy p:not(.eyebrow) {
     font-size: 0.82rem;
     line-height: 1.8;
-    text-indent: 1.2em; /* Laat de eerste regel inspringen */
+    text-indent: 1.25em; /* Laat de eerste regel inspringen */
 }
 
 /* Maakt de eerste letter van iedere verhaalparagraaf groter en dikker */
@@ -526,17 +526,17 @@ input:focus-visible {
 
 /* Plaatst het logo links in de header */
 .logo {
-    position: absolute;
-    left: 8%; /* Afstand vanaf de linkerkant */
-    top: 10px;
-    display: block;
+    position: absolute; /* Haalt het logo uit de normale flex-indeling */
+    left: 0%; /* Afstand vanaf de linkerkant */
+    top: 0; /* Afstand vanaf de bovenkant */
+    display: block; /* Zorgt ervoor dat de link als blokelement wordt weergegeven */
 }
 
-/* Bepaalt de afmetingen van het logo */
+/* Bepaalt de afmetingen en weergave van het logo */
 .logo img {
-    width: 42px;
-    height: 42px;
-    object-fit: contain;
+    width: 64px; /* Breedte van het logo */
+    height: 64px; /* Hoogte van het logo */
+    object-fit: contain; /* Zorgt dat het volledige logo zichtbaar blijft zonder vervorming */
 }
 
 /* Verwijdert standaard opmaak van de navigatie- en footer-lijsten */
@@ -598,7 +598,7 @@ input:focus-visible {
 
 /* Afbeelding van het footerlogo */
 .footer-brand img {
-    width: 90px;
+    width: 180px;
     height: auto;
 }
 

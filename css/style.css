@@ -1,5 +1,5 @@
-/* Google Fonts importeren: Montserrat voor gewone tekst en Space Mono voor koppen */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap');
+/* Google Fonts importeren */
+@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Corben:wght@400;700&family=Google+Sans+Flex:opsz,wght@6..100,100..1000&family=Old+Standard+TT:wght@400;700&family=Press+Start+2P&display=swap');
 
 
 /* =================================
@@ -21,7 +21,7 @@ body {
     margin: 0; /* Verwijdert de standaard buitenmarge van de browser */
     background-color: #eeeeee; /* Achtergrondkleur van de website */
     color: #171717; /* Standaard tekstkleur */
-    font-family: 'Montserrat', sans-serif; /* Standaard lettertype */
+    font-family: "Google Sans Flex", sans-serif; /* Standaard lettertype */
     line-height: 1.6; /* Ruimte tussen tekstregels */
     word-spacing: 0.08em; /* Extra ruimte tussen woorden */
 }
@@ -45,15 +45,15 @@ body {
 /* Plaatst het logo links in de header */
 .logo {
     position: absolute; /* Haalt het logo uit de normale flex-indeling */
-    left: 8%; /* Afstand vanaf de linkerkant */
-    top: 10px; /* Afstand vanaf de bovenkant */
+    left: 0%; /* Afstand vanaf de linkerkant */
+    top: 0; /* Afstand vanaf de bovenkant */
     display: block; /* Zorgt ervoor dat de link als blokelement wordt weergegeven */
 }
 
 /* Bepaalt de afmetingen en weergave van het logo */
 .logo img {
-    width: 42px; /* Breedte van het logo */
-    height: 42px; /* Hoogte van het logo */
+    width: 64px; /* Breedte van het logo */
+    height: 64px; /* Hoogte van het logo */
     object-fit: contain; /* Zorgt dat het volledige logo zichtbaar blijft zonder vervorming */
 }
 
@@ -84,22 +84,6 @@ body {
     font-weight: 700; /* Dikke tekst */
 }
 
-/* Verandert de kleur en onderstreping wanneer je met de muis over een link gaat */
-a:hover {
-    color: #ffe08a;
-    text-decoration: underline;
-}
-
-/* Verandert de kleur zolang je op een link klikt */
-a:active {
-    color: #ffcf00;
-}
-
-/* Bepaalt de kleur van links die eerder zijn bezocht */
-a:visited {
-    color: #f5e7d4;
-}
-
 
 /* =================================
    ALGEMENE INDELING VAN DE PAGINA
@@ -107,7 +91,7 @@ a:visited {
 
 /* Beperkt de breedte van directe secties binnen main en centreert deze */
 main > section {
-    width: min(1100px, 90%); /* Maximaal 1100px breed of 90% van het scherm */
+    width: 100%; /* Maximaal 1100px breed of 90% van het scherm */
     margin: 0 auto; /* Centreert de sectie horizontaal */
 }
 
@@ -116,6 +100,7 @@ main > section {
     position: relative; /* Maakt dit het referentiepunt voor de tekst over de afbeelding */
     min-height: 360px; /* Minimale hoogte van het hero-gedeelte */
     overflow: hidden; /* Verbergt inhoud die buiten de sectie valt */
+    min-height: 50vh;
 }
 
 /* Zorgt dat de hero-afbeelding de volledige breedte vult */
@@ -140,27 +125,30 @@ main > section {
    KOPPEN EN TEKST
 ================================= */
 
-/* Algemene vormgeving van H1- en H2-koppen */
-h1,
-h2 {
+/* Vormgeving van de grootste koppen */
+h1 {
     margin: 0 0 18px; /* Geen bovenmarge en 18px ondermarge */
-    font-family: 'Space Mono', monospace; /* Lettertype voor koppen */
+    font-family: "Google Sans Flex", sans-serif; /* Lettertype voor koppen */
     font-weight: 700; /* Dikke tekst */
     line-height: 1.05; /* Kleine afstand tussen de regels */
     letter-spacing: -0.04em; /* Maakt de letters iets compacter */
     text-indent: 0.2em; /* Laat de eerste regel iets inspringen */
-}
-
-/* Vormgeving van de grootste koppen */
-h1 {
     font-size: clamp(2rem, 4vw, 3.5rem); /* Lettergrootte past zich aan het scherm aan */
     text-transform: uppercase; /* Zet de tekst om naar hoofdletters */
 }
 
 /* Vormgeving van de kleinere koppen */
 h2 {
-    font-size: clamp(1.35rem, 2.5vw, 2rem); /* Responsieve lettergrootte */
+    margin: 0 0 18px; /* Geen bovenmarge en 18px ondermarge */
+    font-family: "Press Start 2P", sans-serif; /* Lettertype voor koppen */
+    font-weight: 700; /* Dikke tekst */
+    line-height: 1.05; /* Kleine afstand tussen de regels */
+    letter-spacing: -0.04em; /* Maakt de letters iets compacter */
+    text-indent: 0.2em; /* Laat de eerste regel iets inspringen */
+    font-size: clamp(1.35rem, 2vw, 2rem); /* Responsieve lettergrootte */
 }
+
+
 
 /* Algemene vormgeving van alinea's */
 p {
@@ -401,7 +389,7 @@ nav > ul > li > a {
 /* Afwijkende vormgeving van de hoofdkop op de contactpagina */
 .contact-intro h1 {
     margin-bottom: 30px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Google Sans Flex', sans-serif;
     font-size: 3rem;
     font-weight: 500;
 }
@@ -560,14 +548,14 @@ nav > ul > li > a {
 .genre-description h2 {
     margin-bottom: 20px;
     text-align: center;
-    font-family: Georgia, serif;
+    font-family: "Old Standard TT", serif;
     font-size: 1.5rem;
     font-weight: 400;
 }
 
 /* Vormgeving van de tekst binnen een genreomschrijving */
 .genre-description p {
-    font-family: Georgia, serif;
+    font-family: "Old Standard TT", serif;
     font-size: 0.78rem;
     line-height: 1.5;
     text-indent: 0.5em;
@@ -653,6 +641,11 @@ nav > ul > li > a {
         font-size: 0.7rem;
     }
 
+    /* Zorgt ervoor dat background kleur in contact pagina transperant verandert */
+    .contact-form-section {
+        background-color: #ffffff;
+    }
+
     /* Maakt het berichtveld kleiner */
     .message-field textarea {
         min-height: 120px;
@@ -666,7 +659,6 @@ nav > ul > li > a {
         font-size: 0.7rem;
     }
 
-
     /* Genrespagina: minder ruimte rondom de inhoud */
     .genres-main {
         padding: 25px 5%;
@@ -676,7 +668,7 @@ nav > ul > li > a {
     .genres-main > h1 {
         margin-bottom: 20px;
         font-size: 1.5rem;
-        font-family: Georgia, serif;
+        font-family: "Old Standard TT", serif;
         font-weight: 400;
     }
 
@@ -891,7 +883,7 @@ nav > ul > li > a {
 .contact-main {
     min-height: 65vh; /* Minimaal 65% van de hoogte van het zichtbare scherm */
     padding-top: 35px;
-    padding-bottom: 35px;
+    padding-bottom: 0;
 }
 
 /* Algemene binnenruimte en rand voor fieldsets */
@@ -960,7 +952,7 @@ textarea {
 
 /* Afbeelding van het footerlogo */
 .footer-brand img {
-    width: 90px;
+    width: 180px;
     height: auto;
 }
 
