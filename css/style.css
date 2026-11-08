@@ -589,6 +589,7 @@ nav > ul > li > a {
     border-top: 0.15rem double #ffffff;
     font-size: 0.74rem;
     z-index: 99999;
+    margin-bottom: 10px;
 }
 
 .cookie-message p {
