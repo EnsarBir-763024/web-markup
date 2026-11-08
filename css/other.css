@@ -100,7 +100,7 @@ a:focus-visible {
     border: 0.15rem double #00d59a;
     background-color: #050505;
     color: #00d59a;
-    font-family: "Press Start 2P", monospace;
+    font-family: "Press Start 2P", sans-serif;
     font-size: 0.75rem;
 }
 
@@ -191,7 +191,7 @@ a:focus-visible {
 .page-title {
     margin: 0;
     padding: 0.8rem 1rem 1.5rem;
-    font-family: Georgia, "Old Standard TT", serif;
+    font-family: "Old Standard TT", serif;
     font-size: clamp(1.5rem, 2.4vw, 2.1rem);
     font-weight: 400;
     text-align: center;
@@ -592,6 +592,16 @@ article-numbering {
     float: left;
 }
 
+    #nodarkmode {
+        color: #000000;
+    }
+
+    #nopixel_nodarkmode {
+        color: #000000;
+        font-family: "Cactus Classical Serif";
+        font-size: 1rem;
+        font-weight: 600;
+    }
 
 /* =========================================
    Tablet - maximaal 1024px
@@ -787,6 +797,27 @@ article-numbering {
     }
 }
 
+@media screen and (max-width: 768px) and (prefers-color-scheme: dark) {
+    .article-content {
+        background-color: #000000;
+    }
+
+    .console-content {
+        background-color: #000000;
+    }
+
+    #nodarkmode {
+        color: #ffffff;
+    }
+
+    #nopixel_nodarkmode {
+        color: #ffffff;
+        font-family: "Cactus Classical Serif";
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
 /* =================================
    MOBIEL EN KLEINE TABLETS
 ================================= */
@@ -946,4 +977,74 @@ article-numbering {
         object-fit: contain;
     }
 
+}
+
+
+/* =================================
+   AUTOMATIC DARK MODE
+================================= */
+
+/* Default: show light mode logo */
+.logo-light {
+    display: block;
+}
+
+.logo-dark {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .logo-light {
+        display: none;
+    }
+
+    .logo-dark {
+        display: block;
+    }
+
+    /* Changes the main website background and default text */
+    body {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    /* Changes text on the main content areas */
+    .contact-main,
+    .contact-intro,
+    .genres-main {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    /* Makes general headings and paragraphs light */
+    h1,
+    h2,
+    p {
+        color: #ffffff;
+    }
+
+    /* Keeps the header and footer unchanged */
+    .site-header,
+    .site-footer {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .site-header a,
+    .site-footer a {
+        color: #ffffff;
+    }
+
+    /* =========================================
+    Algemene pagina
+    ========================================= */
+
+    /* Houdt de inhoud van de website in het midden */
+    .page-shell {
+        width: 100%;
+        max-width: 76rem;
+        margin: 0 auto;
+        background-color: #000000;
+    }
 }

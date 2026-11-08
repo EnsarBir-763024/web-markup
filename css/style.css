@@ -100,7 +100,6 @@ main > section {
     position: relative; /* Maakt dit het referentiepunt voor de tekst over de afbeelding */
     min-height: 360px; /* Minimale hoogte van het hero-gedeelte */
     overflow: hidden; /* Verbergt inhoud die buiten de sectie valt */
-    min-height: 50vh;
 }
 
 /* Zorgt dat de hero-afbeelding de volledige breedte vult */
@@ -585,7 +584,6 @@ nav > ul > li > a {
     font-style: italic;
 }
 
-
 /* =================================
    MOBIELE WEERGAVE
 ================================= */
@@ -872,6 +870,7 @@ nav > ul > li > a {
         width: 100%;
         margin: 0 0 14px;
     }
+
 }
 
 
@@ -1036,4 +1035,112 @@ textarea {
     margin: 0;
     font-size: 0.65rem;
     text-align: center;
+}
+
+/* =================================
+   AUTOMATIC DARK MODE
+================================= */
+
+/* Default: show light mode logo */
+.logo-light {
+    display: block;
+}
+
+.logo-dark {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .logo-light {
+        display: none;
+    }
+
+    .logo-dark {
+        display: block;
+    }
+
+    /* Changes the main website background and default text */
+    body {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    /* Changes text on the main content areas */
+    .contact-main,
+    .contact-intro,
+    .genres-main {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    /* Makes general headings and paragraphs light */
+    h1,
+    h2,
+    p {
+        color: #ffffff;
+    }
+
+    /* Keeps the header and footer unchanged */
+    .site-header,
+    .site-footer {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .site-header a,
+    .site-footer a {
+        color: #ffffff;
+    }
+}
+
+@media screen and (max-width: 768px) and (prefers-color-scheme: light) {
+    .content-row.reverse {
+        background-color: #590202;
+    }
+
+    /* Zet gewone inhoudsrijen ook horizontaal */
+    .content-row:not(.reverse) {
+        background-color: #807809;
+    }
+    
+    #crash-title {
+        color: #ffffff;
+    }
+
+    #future-title {
+        color: #ffffff;
+    }
+    
+}
+
+@media screen and (max-width: 768px) and (prefers-color-scheme: dark) {
+    .contact-form-section {
+        background-color: #000000;
+    }
+
+    .contact-fields label {
+        color: #ffffff;
+    }
+
+    .message-field label {
+        color: #ffffff;
+    }
+
+    .content-row.reverse {
+        background-color: #8F6F49;
+    }
+
+    /* Zet gewone inhoudsrijen ook horizontaal */
+    .content-row:not(.reverse) {
+        background-color: #807809;
+    }
+
+    #intro-title {
+        color: #000000;
+    }
+
+    #platform-title {
+        color: #000000;
+    }
 }

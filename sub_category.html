@@ -16,7 +16,8 @@
 	<body>
     <header class="site-header">
         <a class="logo" href="index.html" aria-label="WOHIS home">
-            <img src="img/wohis-logo.png" alt="WOHIS logo" title="WOHIS logo">
+            <img class="logo-light" src="img/wohis-logo.png" alt="WOHIS logo">
+            <img class="logo-dark" src="img/favicon_dark_mode.png" alt="WOHIS logo &#40;dark mode version&#41;" aria-hidden="true">
         </a>
 
         <nav class="main-nav" aria-label="Hoofdnavigatie">
@@ -34,11 +35,11 @@
 				<article class="story story-green">
 					<figure class="story-image">
 						<img src="img/E.T.-The-Extraterrestrial-Video-Game.png" alt="Collage van klassieke videogames en gamebeelden" title="Exponentiële groei van videogames">
-						<figcaption>De snelle ontwikkeling van videogames</figcaption>
+						<figcaption id="nodarkmode">De snelle ontwikkeling van videogames</figcaption>
 					</figure>
 					<section class="story-copy">
-						<h2>Exponentieel groei</h2>
-						<p>In de jaren zeventig en tachtig groeiden videogames snel in populariteit&#46; Speelhallen stonden vol met arcadekasten&#46; Tegelijkertijd brachten de eerste consoles games naar de huiskamer&#46; <em>Groeide gaming uit tot een nieuwe vorm van entertainment&#46;</em></p>
+						<h2 id="nodarkmode">Exponentieel groei</h2>
+						<p id="nodarkmode">In de jaren zeventig en tachtig groeiden videogames snel in populariteit&#46; Speelhallen stonden vol met arcadekasten&#46; Tegelijkertijd brachten de eerste consoles games naar de huiskamer&#46; <em>Groeide gaming uit tot een nieuwe vorm van entertainment&#46;</em></p>
 						<a class="button-link" href="artikel-1.html">Ontdek de groei</a>
 					</section>
 				</article>
@@ -58,56 +59,52 @@
 				<article class="story story-green">
 					<figure class="story-image">
 						<img src="img/nintendo-sega.png" alt="Klassieke Nintendo- en Sega-spelcomputers naast een beeldbuistelevisie" title="Nintendo en Sega">
-						<figcaption>Nintendo en Sega: de console-rivaliteit</figcaption>
+						<figcaption id="nodarkmode">Nintendo en Sega: de console-rivaliteit</figcaption>
 					</figure>
 					<section class="story-copy">
-						<h2>Nintendo &amp; Sega</h2>
-						<p>Na het herstel van de game-industrie ontstond een <strong>rivaliteit</strong> tussen Nintendo en Sega&#46; Nintendo stond bekend voor hun herkenbare personages en toegankelijke games&#44; terwijl Sega bekend stond met snelle actie en stoer imago&#46;</p>
+						<h2 id="nodarkmode">Nintendo &amp; Sega</h2>
+						<p id="nodarkmode">Na het herstel van de game-industrie ontstond een <strong>rivaliteit</strong> tussen Nintendo en Sega&#46; Nintendo stond bekend voor hun herkenbare personages en toegankelijke games&#44; terwijl Sega bekend stond met snelle actie en stoer imago&#46;</p>
 						<a class="button-link" href="artikel-3.html">Lees verder</a>
 					</section>
 				</article>
 			</section>
-
-			
 		</main>
+    	<footer class="site-footer">
+        	<section class="footer-brand">
+            	<a href="index.html" aria-label="WOHIS home">
+                	<img class="logo-light" src="img/wohiswithtext.png" alt="WOHIS logo">
+	                <img class="logo-dark" src="img/wohiswithtextdarkmode.png" alt="WOHIS logo &#40;dark mode version&#41;" aria-hidden="true">
+    	        </a>
+	        </section>
 
-        <footer class="site-footer">
-        <section class="footer-brand">
-            <a href="index.html" aria-label="WOHIS home">
-                <img src="img/wohiswithtext.png"
-                    alt="WOHIS logo"
-                    title="WOHIS logo">
-            </a>
-        </section>
+    	    <nav aria-label="Ontdek">
+        	    <ul>
+            	    <li><strong>Ontdek</strong></li>
+                	<li><a href="sub_category.html">Het begin</a></li>
+	                <li><a href="console_war.html">Platforms</a></li>
+    	            <li><a href="genres.html">Genres</a></li>
+        	    </ul>
+	        </nav>
 
-        <nav aria-label="Ontdek">
-            <ul>
-                <li><strong>Ontdek</strong></li>
-                <li><a href="sub_category.html">Het begin</a></li>
-                <li><a href="console_war.html">Platforms</a></li>
-                <li><a href="genres.html">Genres</a></li>
-            </ul>
-        </nav>
+    	    <nav aria-label="Over WOHIS">
+        	    <ul>
+            	    <li><strong>Over WOHIS</strong></li>
+	                <li><a href="contact.html">Contact</a></li>
+    	            <li><a href="contact.html">Over deze website</a></li>
+        	    </ul>
+	        </nav>
 
-        <nav aria-label="Over WOHIS">
-            <ul>
-                <li><strong>Over WOHIS</strong></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="contact.html">Over deze website</a></li>
-            </ul>
-        </nav>
+	        <nav aria-label="Legal">
+    	        <ul>
+        	        <li><strong>Legal</strong></li>
+            	    <li><a href="contact.html">Algemene voorwaarden</a></li>
+                	<li><a href="contact.html">Privacyverklaring</a></li>
+	            </ul>
+    	    </nav>
 
-        <nav aria-label="Legal">
-            <ul>
-                <li><strong>Legal</strong></li>
-                <li><a href="contact.html">Algemene voorwaarden</a></li>
-                <li><a href="contact.html">Privacyverklaring</a></li>
-            </ul>
-        </nav>
-
-        <p class="copyright">
-            &copy; 2026 WOHIS &#45; Alle rechten voorbehouden&#46;
-        </p>
-    </footer>
+        	<p class="copyright">
+            	&copy; 2026 WOHIS &#45; Alle rechten voorbehouden&#46;
+	        </p>
+    	</footer>
 	</body>
 </html>

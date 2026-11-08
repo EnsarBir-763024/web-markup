@@ -130,7 +130,7 @@ input:focus-visible {
     height: 2.5rem;
     background-color: #050505;
     color: #00d7a0;
-    font-family: "Press Start 2P", monospace; /* Pixellettertype */
+    font-family: "Press Start 2P", sans-serif; /* Pixellettertype */
     font-size: 1rem;
     border: 0.2rem double #00d7a0; /* Dubbele rand */
 }
@@ -162,7 +162,7 @@ input:focus-visible {
 .page-heading h1,
 .story-copy h2,
 .extra-info h2 {
-    font-family: "Press Start 2P", monospace;
+    font-family: "Press Start 2P", sans-serif;
     font-weight: 400;
     line-height: 1.5; /* Ruimte tussen tekstregels */
 }
@@ -236,10 +236,7 @@ input:focus-visible {
     height: auto;
     aspect-ratio: 4 / 3; /* Houdt de beeldverhouding 4:3 aan */
     object-fit: cover; /* Vult het afbeeldingsvak zonder vervorming */
-    border-color: #92734e;
-    border-style: double;
-    border-width: 0.2rem;
-    border-radius: 0.35rem; /* Licht afgeronde hoeken */
+    border-radius: 0.4rem; /* Licht afgeronde hoeken */
 }
 
 /* Vormgeving van het bijschrift onder de afbeelding */
@@ -862,3 +859,67 @@ input:focus-visible {
 }
 
 
+/* =================================
+   AUTOMATIC DARK MODE
+================================= */
+
+/* Default: show light mode logo */
+.logo-light {
+    display: block;
+}
+
+.logo-dark {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .logo-light {
+        display: none;
+    }
+
+    .logo-dark {
+        display: block;
+    }
+
+    /* Changes the main website background and default text */
+    body {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    /* Changes text on the main content areas */
+    .contact-main,
+    .contact-intro,
+    .genres-main {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    /* Makes general headings and paragraphs light */
+    h1,
+    h2,
+    p {
+        color: #ffffff;
+    }
+
+    #nodarkmode {
+        color: #000000;
+    }
+
+    .story-light {
+        background-color: #000000;
+    }
+
+    /* Keeps the header and footer unchanged */
+    .site-header,
+    .site-footer {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .site-header a,
+    .site-footer a {
+        color: #ffffff;
+    }
+}
